@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="แอปพลิเคชันทดสอบความรู้ออนไลน์ - ทดสอบความรู้ด้าน Git, DDD, OOAD, OOP, SOLID, CI/CD และ Architecture"
+    />
+    <meta name="keywords" content="quiz, แบบทดสอบ, Git, DDD, OOAD, OOP" />
+    <title>Quiz Master - ทดสอบความรู้ออนไลน์</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="welcome-card glass-card">
+          <div class="icon-badge">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              />
+            </svg>
+          </div>
+          <h1 class="welcome-title">Quiz Master</h1>
+          <p class="welcome-subtitle">ทดสอบความรู้ด้านการพัฒนาซอฟต์แวร์</p>
+
+          <div class="topics-preview">
+            <div class="topic-tag">Git</div>
+            <div class="topic-tag">DDD</div>
+            <div class="topic-tag">OOAD</div>
+            <div class="topic-tag">OOP</div>
+            <div class="topic-tag">SOLID</div>
+            <div class="topic-tag">CI/CD</div>
+            <div class="topic-tag">Architecture</div>
+            <div class="topic-tag">Microservices</div>
+          </div>
+
+          <div class="stats-preview">
+            <div class="stat-item">
+              <div class="stat-number" id="total-questions">--</div>
+              <div class="stat-label">คำถาม</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">⏱️</div>
+              <div class="stat-label">ไม่จำกัดเวลา</div>
+            </div>
+          </div>
+
+          <button id="start-btn" class="btn btn-primary">
+            <span>เริ่มทำแบบทดสอบ</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="screen">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-info">
+            <span class="progress-text"
+              >คำถามที่ <span id="current-question">1</span> จาก
+              <span id="total-questions-quiz">10</span></span
+            >
+            <span class="progress-percentage" id="progress-percentage">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card glass-card">
+          <div class="question-header">
+            <div class="question-number">
+              คำถามที่ <span id="q-number">1</span>
+            </div>
+          </div>
+          <h2 class="question-text" id="question-text">กำลังโหลดคำถาม...</h2>
+
+          <div class="options-container" id="options-container">
+            <!-- Options will be inserted here dynamically -->
+          </div>
+
+          <div class="quiz-navigation">
+            <button id="prev-btn" class="btn btn-secondary" disabled>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              <span>ย้อนกลับ</span>
+            </button>
+            <button id="next-btn" class="btn btn-primary" disabled>
+              <span>ถัดไป</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+            <button
+              id="submit-btn"
+              class="btn btn-success"
+              style="display: none"
+            >
+              <span>ส่งคำตอบ</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="screen">
+        <div class="result-card glass-card">
+          <div class="result-icon" id="result-icon">
+            <!-- Icon will be inserted dynamically -->
+          </div>
+          <h1 class="result-title" id="result-title">ผลการทดสอบ</h1>
+          <div class="result-score">
+            <div class="score-circle">
+              <svg class="score-ring" width="200" height="200">
+                <circle class="score-ring-bg" cx="100" cy="100" r="85" />
+                <circle
+                  class="score-ring-fill"
+                  id="score-ring-fill"
+                  cx="100"
+                  cy="100"
+                  r="85"
+                />
+              </svg>
+              <div class="score-text">
+                <span class="score-number" id="score-number">0</span>
+                <span class="score-total"
+                  >/ <span id="score-total">10</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="result-stats">
+            <div class="result-stat">
+              <div class="result-stat-icon correct">✓</div>
+              <div class="result-stat-value" id="correct-count">0</div>
+              <div class="result-stat-label">ถูกต้อง</div>
+            </div>
+            <div class="result-stat">
+              <div class="result-stat-icon wrong">✗</div>
+              <div class="result-stat-value" id="wrong-count">0</div>
+              <div class="result-stat-label">ผิด</div>
+            </div>
+            <div class="result-stat">
+              <div class="result-stat-icon percentage">%</div>
+              <div class="result-stat-value" id="percentage">0%</div>
+              <div class="result-stat-label">คะแนน</div>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <button id="review-btn" class="btn btn-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+              <span>ดูเฉลย</span>
+            </button>
+            <button id="retry-btn" class="btn btn-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
+              <span>ทำใหม่อีกครั้ง</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Screen -->
+      <div id="review-screen" class="screen">
+        <div class="review-container">
+          <div class="review-header">
+            <h2>เฉลยแบบทดสอบ</h2>
+            <button id="back-to-result-btn" class="btn btn-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+              <span>กลับ</span>
+            </button>
+          </div>
+          <div id="review-content" class="review-content">
+            <!-- Review items will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

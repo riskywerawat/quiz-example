@@ -812,6 +812,142 @@ body {
   color: var(--success-500);
 }
 
+/* ===== Category Selection Screen ===== */
+.category-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.category-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, white, var(--primary-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.02em;
+}
+
+.category-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-200);
+  font-weight: 400;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.category-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--category-color, var(--primary-500));
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+  transform-origin: left;
+}
+
+.category-card:hover::before {
+  transform: scaleX(1);
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--category-color, var(--primary-500));
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3),
+              0 0 0 1px var(--category-color, var(--primary-500));
+}
+
+.category-card:active {
+  transform: translateY(-4px);
+}
+
+.category-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-md);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.category-card:hover .category-icon {
+  animation: none;
+  transform: scale(1.2) rotate(5deg);
+  transition: transform var(--transition-base);
+}
+
+.category-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.category-description {
+  font-size: 0.9375rem;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.category-count {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--category-color, var(--primary-500));
+  transition: all var(--transition-base);
+}
+
+.category-card:hover .category-count {
+  background: var(--category-color, var(--primary-500));
+  color: white;
+  border-color: var(--category-color, var(--primary-500));
+}
+
+.back-btn {
+  display: flex;
+  margin: var(--spacing-lg) auto 0;
+  max-width: 200px;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   html {
@@ -836,6 +972,14 @@ body {
 
   .stats-preview {
     grid-template-columns: 1fr;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-title {
+    font-size: 2rem;
   }
 
   .question-text {
@@ -896,4 +1040,71 @@ body {
 /* ===== SVG Gradient Definition ===== */
 svg defs {
   display: none;
+}
+
+/* ===== Code Window (Carbon Style) ===== */
+.code-window {
+  background: #1e1e1e;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: var(--spacing-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn var(--transition-base);
+}
+
+.code-header {
+  background: #2d2d2d;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.code-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control.red {
+  background-color: #ff5f56;
+}
+
+.control.yellow {
+  background-color: #ffbd2e;
+}
+
+.control.green {
+  background-color: #27c93f;
+}
+
+.code-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #888;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.code-content {
+  padding: 0;
+  margin: 0;
+}
+
+.code-content pre {
+  margin: 0 !important;
+  padding: 1.5rem !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  font-family: 'Fira Code', 'Consolas', monospace !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
 }

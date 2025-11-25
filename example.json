@@ -1,622 +1,1758 @@
-[
-  {
-    "question": "คำสั่ง git init ใช้ทำอะไร?",
-    "options": [
-      "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง",
-      "ดึงข้อมูลจาก remote repository",
-      "ลบ Git repository",
-      "ตรวจสอบสถานะไฟล์"
-    ],
-    "answer": "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง"
-  },
-  {
-    "question": "คุณจะใช้คำสั่งใดเพื่อตรวจสอบสถานะปัจจุบันของการเก็บข้อมูล Git ของคุณ?",
-    "options": [
-      "git log",
-      "git commit",
-      "git status",
-      "git branch"
-    ],
-    "answer": "git status"
-  },
-  {
-    "question": "‘branch’ ใน Git หมายถึงอะไร?",
-    "options": [
-      "ไฟล์ที่ถูกลบ",
-      "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project",
-      "ข้อความ commit",
-      "ชื่อผู้ใช้งาน"
-    ],
-    "answer": "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project"
-  },
-  {
-    "question": "คุณจะสร้าง branch และเปลี่ยนไปยัง branch นั้นทันทีได้อย่างไร?",
-    "options": [
-      "git branch [branch-name]",
-      "git checkout [branch-name]",
-      "git checkout -b [branch-name]",
-      "git merge [branch-name]"
-    ],
-    "answer": "git checkout -b [branch-name]"
-  },
-  {
-    "question": "วัตถุประสงค์ของ pull request ใน Git คืออะไร?",
-    "options": [
-      "เพื่อลบ branch",
-      "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก",
-      "เพื่อเปลี่ยนชื่อ remote",
-      "เพื่อตรวจสอบประวัติ commit"
-    ],
-    "answer": "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก"
-  },
-  {
-    "question": "คำสั่งใดที่อนุญาตให้คุณเพิ่มการเปลี่ยนแปลงทั้งหมดใน work directory ของคุณไปยังพื้นที่จัดเตรียม สำหรับ commit (staging area)?",
-    "options": [
-      "git commit",
-      "git add .",
-      "git push",
-      "git pull"
-    ],
-    "answer": "git add ."
-  },
-  {
-    "question": "วัตถุประสงค์ของคำสั่ง git log คืออะไร?",
-    "options": [
-      "เพื่อสร้าง branch ใหม่",
-      "เพื่อแสดงประวัติการ commit ของ project ของคุณ",
-      "เพื่อรวม branch",
-      "เพื่อยกเลิกการเปลี่ยนแปลง"
-    ],
-    "answer": "เพื่อแสดงประวัติการ commit ของ project ของคุณ"
-  },
-  {
-    "question": "คุณจะกำหนดค่า user name ของคุณใน Git ได้อย่างไร?",
-    "options": [
-      "git config --global username \"Your Name\"",
-      "git config --global user.name \"Your Name\"",
-      "git set name \"Your Name\"",
-      "git name \"Your Name\""
-    ],
-    "answer": "git config --global user.name \"Your Name\""
-  },
-  {
-    "question": "คำสั่งใดที่ใช้ในการย้อนกลับไปยัง commit ก่อนหน้า?",
-    "options": [
-      "git revert [commit-hash]",
-      "git reset [commit-hash]",
-      "git stash",
-      "ทั้ง A และ B ถูกต้อง"
-    ],
-    "answer": "ทั้ง A และ B ถูกต้อง"
-  },
-  {
-    "question": "คุณจะส่งการ commit ในเครื่องของคุณไปยัง remote Git ได้อย่างไร?",
-    "options": [
-      "git fetch",
-      "git pull origin master",
-      "git push origin master",
-      "git merge"
-    ],
-    "answer": "git push origin master"
-  },
-  {
-    "question": "DDD (Domain-Drive Design) คืออะไร",
-    "options": [
-      "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลฐานข้อมูล",
-      "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลโดเมน",
-      "วิธีการพัฒนาซอฟต์แวร์ที่เน้นอินเทอร์เฟซผู้ใช้",
-      "วิธีการทดสอบซอฟต์แวร์"
-    ],
-    "answer": "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลโดเมน"
-  },
-  {
-    "question": "DDD ช่วยแก้ปัญหาอะไรได้บ้าง",
-    "options": [
-      "ปัญหาความเร็วของอินเทอร์เน็ต",
-      "ปัญหาการจัดการ project",
-      "ปัญหาทางธุรกิจที่ซับซ้อน",
-      "ปัญหาการจัดเก็บไฟล์"
-    ],
-    "answer": "ปัญหาทางธุรกิจที่ซับซ้อน"
-  },
-  {
-    "question": "ข้อใดคือประโยชน์หลักของ DDD",
-    "options": [
-      "ติดตั้งง่าย",
-      "ราคาถูก",
-      "โค้ดที่ชัดเจน อ่านง่าย และทดสอบได้",
-      "ประสิทธิภาพการทำงานที่รวดเร็ว"
-    ],
-    "answer": "โค้ดที่ชัดเจน อ่านง่าย และทดสอบได้"
-  },
-  {
-    "question": "Subdomain แบ่งออกเป็นประเภทใดบ้าง",
-    "options": [
-      "Internal, External",
-      "Core, Generic, Supporting",
-      "Primary, Secondary",
-      "High-level, Low-level"
-    ],
-    "answer": "Core, Generic, Supporting"
-  },
-  {
-    "question": "Bounded Context มีหน้าที่อะไร",
-    "options": [
-      "สร้าง UI",
-      "กำหนดขอบเขตที่ชัดเจนสำหรับการใช้งานโมเดลเฉพาะ",
-      "จัดการฐานข้อมูล",
-      "เขียน Unit Test"
-    ],
-    "answer": "กำหนดขอบเขตที่ชัดเจนสำหรับการใช้งานโมเดลเฉพาะ"
-  },
-  {
-    "question": "การออกแบบเชิงกลยุทธ์ช่วยในเรื่องใด",
-    "options": [
-      "เร่งความเร็วในการโหลดหน้าเว็บ",
-      "แบ่งปัญหาธุรกิจที่ซับซ้อนออกเป็นส่วนเล็ก ๆ ที่ชัดเจน",
-      "จัดการการเข้าถึงฐานข้อมูล",
-      "ทำ Unit Test อัตโนมัติ"
-    ],
-    "answer": "แบ่งปัญหาธุรกิจที่ซับซ้อนออกเป็นส่วนเล็ก ๆ ที่ชัดเจน"
-  },
-  {
-    "question": "EventStorming คืออะไร",
-    "options": [
-      "กระบวนการออกแบบฐานข้อมูล",
-      "กระบวนการรวบรวมกิจกรรมในโดเมนเพื่อสร้างภาพรวมของระบบ",
-      "กระบวนการ deploy code",
-      "กระบวนการเขียน Unit Test"
-    ],
-    "answer": "กระบวนการรวบรวมกิจกรรมในโดเมนเพื่อสร้างภาพรวมของระบบ"
-  },
-  {
-    "question": "ขั้นตอนแรกใน EventStorming คืออะไร",
-    "options": [
-      "ออกแบบ UI",
-      "เขียนโค้ด",
-      "สร้าง Domain Events",
-      "สร้าง database schema"
-    ],
-    "answer": "สร้าง Domain Events"
-  },
-  {
-    "question": "ควรสร้าง User Storie",
-    "options": [
-      "จำเป็น",
-      "ไม่จำเป็น",
-      "บางครั้ง",
-      "ขึ้นอยู่กับขนาด project"
-    ],
-    "answer": "ไม่จำเป็น"
-  },
-  {
-    "question": "Entity ใน DDD คืออะไร",
-    "options": [
-      "วัตถุที่ไม่มีตัวตน",
-      "วัตถุที่มีตัวตนและวงจรชีวิตเฉพาะ",
-      "คลาสฐานข้อมูล",
-      "User interface component"
-    ],
-    "answer": "วัตถุที่มีตัวตนและวงจรชีวิตเฉพาะ"
-  },
-  {
-    "question": "Aggregate Root มีบทบาทอะไร",
-    "options": [
-      "เป็นเพียง Data Transfer Object",
-      "ช่วยควบคุมการทำงานของ Aggregate ทั้งหมด",
-      "เป็นคลาส Utility",
-      "จัดการ Network connection"
-    ],
-    "answer": "ช่วยควบคุมการทำงานของ Aggregate ทั้งหมด"
-  },
-  {
-    "question": "Entity สามารถเป็นส่วนหนึ่งของหลาย Aggregate ได้หรือไม่",
-    "options": [
-      "ได้",
-      "ไม่ได้ เพราะ Entity ควรอยู่ใน Aggregate เดียว",
-      "ได้เฉพาะ Entity ที่เป็น Generic",
-      "ได้เฉพาะ Entity ที่เป็น Core"
-    ],
-    "answer": "ไม่ได้ เพราะ Entity ควรอยู่ใน Aggregate เดียว"
-  },
-  {
-    "question": "เราควรใช้ Pattern ทั้งหมดของ DDD ในทุกโครงการหรือไม่?",
-    "options": [
-      "ควรใช้ทั้งหมดเสมอ",
-      "ไม่ควรใช้เลย",
-      "ควรเลือกใช้ตามความเหมาะสมของโครงการ",
-      "ควรใช้เฉพาะในโครงการขนาดใหญ่เท่านั้น"
-    ],
-    "answer": "ควรเลือกใช้ตามความเหมาะสมของโครงการ"
-  },
-  {
-    "question": "ข้อใดไม่ใช่หลักการสำคัญของ OOAD",
-    "options": [
-      "Encapsulation",
-      "Inheritance",
-      "Polymorphism",
-      "Coupling"
-    ],
-    "answer": "Coupling"
-  },
-  {
-    "question": "เป้าหมายหลักของ OOA คืออะไร",
-    "options": [
-      "วิเคราะห์ความต้องการของระบบ",
-      "ออกแบบโครงสร้างฐานข้อมูล",
-      "เขียน Unit Test",
-      "พัฒนา User Interface"
-    ],
-    "answer": "วิเคราะห์ความต้องการของระบบ"
-  },
-  {
-    "question": "ผลลัพธ์ของ OOD คืออะไร",
-    "options": [
-      "Requirement Document",
-      "UML class diagram",
-      "Test report",
-      "Deployment script"
-    ],
-    "answer": "UML class diagram"
-  },
-  {
-    "question": "ข้อดีของการใช้ OOAD ในการพัฒนาซอฟต์แวร์",
-    "options": [
-      "ช่วยในการจัดการความซับซ้อน",
-      "ช่วยลดการซ้ำซ้อนของโค้ด",
-      "โค้ดมีความยืดหยุ่นและนำกลับมาใช้ใหม่ได้ง่าย",
-      "ข้อดีทั้งหมดข้างต้น"
-    ],
-    "answer": "ข้อดีทั้งหมดข้างต้น"
-  },
-  {
-    "question": "Use Case อธิบายอะไร",
-    "options": [
-      "โครงสร้างของคลาสในระบบ",
-      "การทำงานระหว่าง User กับระบบในมุมมองของ user",
-      "การทำงานภายในของระบบ",
-      "ความสัมพันธ์ระหว่างฐานข้อมูล"
-    ],
-    "answer": "การทำงานระหว่าง User กับระบบในมุมมองของ user"
-  },
-  {
-    "question": "Domain Model แสดงอะไร",
-    "options": [
-      "ลำดับการทำงานของโปรแกรม",
-      "หน้าจอผู้ใช้",
-      "Object และ Relationship ในระบบ ในมุมมองของ problem domain",
-      "โครงสร้าง Network"
-    ],
-    "answer": "Object และ Relationship ในระบบ ในมุมมองของ problem domain"
-  },
-  {
-    "question": "System Sequence Diagram แสดงอะไร",
-    "options": [
-      "โครงสร้างของฐานข้อมูล",
-      "การทำงานระหว่าง User กับระบบในมุมมองของ user",
-      "ลำดับการทำงานระหว่าง User และระบบ ในมุมมองของระบบ",
-      "ความรับผิดชอบของคลาส"
-    ],
-    "answer": "ลำดับการทำงานระหว่าง User และระบบ ในมุมมองของระบบ"
-  },
-  {
-    "question": "ลักษณะสำคัญของ OOP มีอะไรบ้าง",
-    "options": [
-      "Encapsulation",
-      "Inheritance",
-      "Polymorphism",
-      "ทั้งหมดข้างต้น (Encapsulation,Inheritance,Polymorphism)"
-    ],
-    "answer": "ทั้งหมดข้างต้น (Encapsulation,Inheritance,Polymorphism)"
-  },
-  {
-    "question": "Single Responsibility Principle หมายถึงอะไร",
-    "options": [
-      "class ควรมีหลายความรับผิดชอบ",
-      "class ควรมีความรับผิดชอบเพียงอย่างเดียว",
-      "method ควรมีความรับผิดชอบเพียงอย่างเดียว",
-      "project ควรมีความรับผิดชอบเพียงอย่างเดียว"
-    ],
-    "answer": "class ควรมีความรับผิดชอบเพียงอย่างเดียว"
-  },
-  {
-    "question": "คุณสมบัติที่ระบุว่าคลาสควรเปิดสำหรับการขยาย แต่ปิดสำหรับการแก้ไข เป็นคุณสมบัติของ SOLID principle ข้อใด",
-    "options": [
-      "Single Responsibility Principle",
-      "Open/Closed principle",
-      "Liskov Substitution Principle",
-      "Interface Segregation Principle"
-    ],
-    "answer": "Open/Closed principle"
-  },
-  {
-    "question": "ทีมของคุณเริ่มเขียนระบบสำหรับจัดการที่จอดรถโดยใช้ภาษาโปรแกรมที่รองรับ OOP และออกแบบ class hierarchy ไว้ดังนี้:\\nclass Vehicle\\nclass Car inherits Vehicle\\nclass Bicycle inherits Vehicle\\nclass Plane inherited Vehicle\\nclass Helicopter inherited Plane\\nclass MountainBike inherits Bicycle\\nclass Downhill inherits MountainBike\\nObject ของ class ใดสามารถถูก assign ให้กับตัวแปรที่มี type เป็น Bicycle ได้ (เลือกคำตอบที่ถูกต้องทั้งหมด)",
-    "options": [
-      "Vehicle",
-      "Car",
-      "MountainBike",
-      "Plane"
-    ],
-    "answer": "MountainBike"
-  },
-  {
-    "question": "ระบบใดต่อไปนี้ เหมาะสมที่จะใช้คุณสมบัติการการสืบทอดใน OOP",
-    "options": [
-      "ระบบคำนวณภาษีมูลค่าเพิ่ม",
-      "ระบบธนาคารที่มีประเภทบัญชีเงินฝากต่างๆ เช่น บัญชีออมทรัพย์, บัญชีเงินฝากประจำ, บัญชีกระแสรายวัน",
-      "ระบบจัดการไฟล์ในคอมพิวเตอร์",
-      "ระบบส่งอีเมล"
-    ],
-    "answer": "ระบบธนาคารที่มีประเภทบัญชีเงินฝากต่างๆ เช่น บัญชีออมทรัพย์, บัญชีเงินฝากประจำ, บัญชีกระแสรายวัน"
-  },
-  {
-    "question": "Interface Segregation Principle หมายถึงอะไร",
-    "options": [
-      "class ควรมี interface ขนาดใหญ่",
-      "class ควรมี interface ที่ชัดเจน",
-      "interface ควรมี method เพียงเดียว",
-      "interface ไม่ควรมี method เลย"
-    ],
-    "answer": "class ควรมี interface ที่ชัดเจน"
-  },
-  {
-    "question": "Dependency Inversion Principle หมายถึงอะไร",
-    "options": [
-      "โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ",
-      "โมดูลที่มีลำดับสูงควรพึ่งพา abstraction",
-      "โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction",
-      "ทั้งหมดข้างต้น (โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ,โมดูลที่มีลำดับสูงควรพึ่งพา abstraction,โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction)"
-    ],
-    "answer": "ทั้งหมดข้างต้น (โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ,โมดูลที่มีลำดับสูงควรพึ่งพา abstraction,โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction)"
-  },
-  {
-    "question": "เหตุการณ์ใดที่สามารถเป็นตัวบ่งชี้ได้ว่า คอมโพเนนต์นั้นอาจมีความรับผิดชอบที่มากเกินไป",
-    "options": [
-      "Unit test ผ่านเสมอ",
-      "การเขียน unit test เริ่มมีความซับซ้อนมากขึ้น เนื่องจากมีการ mock คลาสที่เยอะเกินไป",
-      "ความเร็วของ build time ลดลง",
-      "จำนวนบรรทัดของโค้ดลดลง"
-    ],
-    "answer": "การเขียน unit test เริ่มมีความซับซ้อนมากขึ้น เนื่องจากมีการ mock คลาสที่เยอะเกินไป"
-  },
-  {
-    "question": "ข้อใดเป็น pipeline ที่ไม่ควรทำ",
-    "options": [
-      "build > unit-test > security-test > deploy-dev > deploy-prd",
-      "security-test > unit-test > build > deploy-prd > deploy-dev",
-      "unit-test > build > deploy-dev > security-test > deploy-prd",
-      "build > unit-test > deploy-dev > security-test > deploy-prd"
-    ],
-    "answer": "security-test > unit-test > build > deploy-prd > deploy-dev"
-  },
-  {
-    "question": "azure repo เปรียบได้กับ service ใด",
-    "options": [
-      "Jira",
-      "github",
-      "Docker",
-      "Jenkins"
-    ],
-    "answer": "github"
-  },
-  {
-    "question": "Monolithic Architecture คืออะไร?",
-    "options": [
-      "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่แบ่งแอปพลิเคชันออกเป็นส่วนเล็กๆ",
-      "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่สร้างแอปพลิเคชันขนาดใหญ่เป็นส่วนเดียวและทำงานร่วมกันทั้งหมด",
-      "รูปแบบสถาปัตยกรรมสำหรับฐานข้อมูลเท่านั้น",
-      "รูปแบบการออกแบบส่วนต่อประสานผู้ใช้"
-    ],
-    "answer": "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่สร้างแอปพลิเคชันขนาดใหญ่เป็นส่วนเดียวและทำงานร่วมกันทั้งหมด"
-  },
-  {
-    "question": "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่แบ่งแอปพลิเคชันขนาดใหญ่ออกเป็นส่วนเล็ก ๆ ที่เป็นอิสระ คืออะไร?",
-    "options": [
-      "Monolithic Architecture",
-      "Microservices Architecture",
-      "Layered Architecture",
-      "Event-Driven Architecture"
-    ],
-    "answer": "Microservices Architecture"
-  },
-  {
-    "question": "ข้อใดไม่ใช่ประโยชน์ของ Microservices?",
-    "options": [
-      "Independent deployment (การปรับใช้แบบอิสระ)",
-      "Technology diversity (ความหลากหลายทางเทคโนโลยี)",
-      "Slower time to market (ใช้เวลาในการออกสู่ตลาดช้าลง)",
-      "Fault isolation (การแยกความผิดพลาด)"
-    ],
-    "answer": "Slower time to market (ใช้เวลาในการออกสู่ตลาดช้าลง)"
-  },
-  {
-    "question": "ข้อใดเป็น challenge ของ Microservices?",
-    "options": [
-      "การออกแบบ UI",
-      "ความเร็วของคอมไพเลอร์",
-      "การสื่อสารกันระหว่างเซอร์วิส",
-      "การตั้งค่า environment variable"
-    ],
-    "answer": "การสื่อสารกันระหว่างเซอร์วิส"
-  },
-  {
-    "question": "หลักการใดเป็นพื้นฐานของ Microservices design?",
-    "options": [
-      "Tight Coupling",
-      "Centralization",
-      "Encapsulation (การห่อหุ้ม)",
-      "High Cohesion"
-    ],
-    "answer": "Encapsulation (การห่อหุ้ม)"
-  },
-  {
-    "question": "ข้อใดต่อไปนี้เป็นข้อดีของ distributed system?",
-    "options": [
-      "ง่ายต่อการ debug",
-      "Single point of failure",
-      "ไม่มีข้อใดถูก",
-      "ง่ายต่อการ deploy"
-    ],
-    "answer": "ไม่มีข้อใดถูก"
-  },
-  {
-    "question": "คุณลักษณะใดไม่ใช่ software quality ของ microservices?",
-    "options": [
-      "Scalability",
-      "Resilience",
-      "Centralization (การรวมศูนย์)",
-      "Agility"
-    ],
-    "answer": "Centralization (การรวมศูนย์)"
-  },
-  {
-    "question": "วิธีใดไม่ใช่ microservices communication?",
-    "options": [
-      "REST",
-      "SQL",
-      "gRPC",
-      "Messaging Queue"
-    ],
-    "answer": "SQL"
-  },
-  {
-    "question": "ข้อใดคือ challenge ของการทำ traditional transactions ใน microservices?",
-    "options": [
-      "ความท้าทายในการรักษาความเป็น Atomicity ข้ามบริการ",
-      "ความท้าทายในการรักษาความเป็น Consistency ข้ามบริการ",
-      "Both B and C (น่าจะหมายถึง ความท้าทายในการรักษาความเป็น Atomicity และ Consistency ข้ามบริการ)",
-      "ปัญหาความเร็วของ Network"
-    ],
-    "answer": "Both B and C (น่าจะหมายถึง ความท้าทายในการรักษาความเป็น Atomicity และ Consistency ข้ามบริการ)"
-  },
-  {
-    "question": "วัตถุประสงค์ของ circuit breaker คืออะไร?",
-    "options": [
-      "เพื่อเพิ่มความเร็วในการโหลดหน้าเว็บ",
-      "เพื่อจัดการความล้มเหลวของ network และป้องกันไม่ให้การเรียกใช้บริการที่ล้มเหลวติดต่อกันซ้ำ ๆ ทำให้ทรัพยากรหมดไป",
-      "เพื่อทำ Load Balancing",
-      "เพื่อตรวจสอบการใช้งานของผู้ใช้"
-    ],
-    "answer": "เพื่อจัดการความล้มเหลวของ network และป้องกันไม่ให้การเรียกใช้บริการที่ล้มเหลวติดต่อกันซ้ำ ๆ ทำให้ทรัพยากรหมดไป"
-  },
-  {
-    "question": "ข้อใดไม่ใช่ resilience pattern?",
-    "options": [
-      "Circuit Breaker",
-      "Retry",
-      "Bulkhead",
-      "Dependency injection (เป็นรูปแบบการออกแบบโค้ด ไม่ใช่รูปแบบการจัดการความยืดหยุ่นของระบบ)"
-    ],
-    "answer": "Dependency injection (เป็นรูปแบบการออกแบบโค้ด ไม่ใช่รูปแบบการจัดการความยืดหยุ่นของระบบ)"
-  },
-  {
-    "question": "ข้อดีของการสื่อสารแบบ asynchronous communication คืออะไร?",
-    "options": [
-      "ง่ายต่อการ Debug",
-      "Scale ง่ายและทนทานต่อความผิดพลาด",
-      "รับประกันความเร็วที่แน่นอน",
-      "เหมาะกับการทำ CRUD operations"
-    ],
-    "answer": "Scale ง่ายและทนทานต่อความผิดพลาด"
-  },
-  {
-    "question": "วิธีการสื่อสารใดที่เหมาะกับการทำ CRUD operations?",
-    "options": [
-      "WebSocket",
-      "REST (Representational State Transfer)",
-      "Message Queue",
-      "gRPC"
-    ],
-    "answer": "REST (Representational State Transfer)"
-  },
-  {
-    "question": "วิธีการสื่อสารใดที่เหมาะกับการทำ real-time applications เช่น ระบบ chat?",
-    "options": [
-      "REST",
-      "SOAP",
-      "WebSocket",
-      "FTP"
-    ],
-    "answer": "WebSocket"
-  },
-  {
-    "question": "แอพแชทเช่น WhatsApp ใช้ไมโครเซอร์วิสเพื่อเชื่อมต่อผู้ใช้แบบเรียลไทม์หลายพันคนเข้าด้วยกัน พวกเขามีข้อบกพร่องในการออกแบบไมโครเซอร์วิสที่การอ่านและเขียนทั้งหมดผ่าน service เดียวคือ service A ซึ่งทำให้ service A ทำงานไม่เสถียรและล่มอยู่บ่อยๆ เลือกข้อที่คุณที่คิดว่าจะช่วยแก้ปัญหานี้?",
-    "options": [
-      "เพิ่ม RAM ให้กับ Service A",
-      "ลดจำนวนผู้ใช้",
-      "แยก API สำหรับการอ่าน (Read) และการเขียน (Write) ออกไปอยู่คนละ service (เป็นหลักการของ CQRS - Command Query Responsibility Segregation)",
-      "ใช้ฐานข้อมูลแบบ Monolithic"
-    ],
-    "answer": "แยก API สำหรับการอ่าน (Read) และการเขียน (Write) ออกไปอยู่คนละ service (เป็นหลักการของ CQRS - Command Query Responsibility Segregation)"
-  },
-  {
-    "question": "แอพพลิเคชั่นของธนาคารแห่งหนึ่ง มีการออกแบบระบบโดยใช้หลักการไมโครเซอร์วิส ธนาคารแห่งนี้มีการตรวจสอบการใช้งานของผู้ใช้แล้วพบว่า service transfer ซึ่งใช้ในการโอนและชำระเงินมีการใช้งานที่สูงตลอดเวลาทำให้เกิดการล่มอยู่บ่อยครั้ง เลือกข้อที่คุณที่คิดว่าจะช่วยแก้ปัญหานี้?",
-    "options": [
-      "รวม service transfer เข้ากับ service อื่นๆ",
-      "เปลี่ยนไปใช้ Monolithic Architecture",
-      "แยก API สำหรับการโอนและจ่ายเงินออกไปอยู่คนละ service (เพื่อลดภาระงานบน service เดียว)",
-      "ลดความถี่ในการทำ Unit Test"
-    ],
-    "answer": "แยก API สำหรับการโอนและจ่ายเงินออกไปอยู่คนละ service (เพื่อลดภาระงานบน service เดียว)"
-  },
-  {
-    "question": "เทคนิคใดที่สามารถใช้จัดการกับความผิดพลาดที่เกิดขึ้นกับระบบอื่น?",
-    "options": [
-      "Load Balancer",
-      "Circuit Breaker",
-      "Caching",
-      "Service Mesh"
-    ],
-    "answer": "Circuit Breaker"
-  },
-  {
-    "question": "คุณลักษณะใดที่เป็นลักษณะของข้อมูลใน microservices architecture?",
-    "options": [
-      "Centralized database (ฐานข้อมูลรวมศูนย์)",
-      "Shared database schema (การใช้ schema ฐานข้อมูลร่วมกัน)",
-      "Decentralized data ownership (การกระจายอำนาจการเป็นเจ้าของข้อมูล)",
-      "Strict consistency across all services (ความสอดคล้องอย่างเข้มงวดในทุกบริการ)"
-    ],
-    "answer": "Decentralized data ownership (การกระจายอำนาจการเป็นเจ้าของข้อมูล)"
-  },
-  {
-    "question": "รูปแบบใดที่ช่วยเพิ่มประสิทธิภาพในการ read แต่เพิ่มความซับซ้อนในการบำรุงรักษา?",
-    "options": [
-      "Normalization",
-      "Sharding",
-      "Denormalization (การลดทอนความเป็นรูปแบบปกติของฐานข้อมูล)",
-      "Replication"
-    ],
-    "answer": "Denormalization (การลดทอนความเป็นรูปแบบปกติของฐานข้อมูล)"
-  },
-  {
-    "question": "ฐานข้อมูลประเภทใดที่เหมาะสำหรับการ read/write ที่ต้องการความไวและสามารถทำ horizontal scale ได้?",
-    "options": [
-      "Relational Database",
-      "Key-value (เช่น Redis, DynamoDB)",
-      "Graph Database",
-      "Document Database"
-    ],
-    "answer": "Key-value (เช่น Redis, DynamoDB)"
-  },
-  {
-    "question": "วัตถุประสงค์หลักของ service discovery คืออะไร?",
-    "options": [
-      "Static routing (การกำหนดเส้นทางแบบคงที่)",
-      "Manual deployment (การปรับใช้ด้วยตนเอง)",
-      "Dynamic routing (การค้นหาและกำหนดเส้นทางไปยังบริการแบบไดนามิก)",
-      "Centralized logging (การบันทึกแบบรวมศูนย์)"
-    ],
-    "answer": "Dynamic routing (การค้นหาและกำหนดเส้นทางไปยังบริการแบบไดนามิก)"
-  },
-  {
-    "question": "เครื่องมือใดที่ใช้ทำ resilience ใน microservices?",
-    "options": [
-      "Jira",
-      "Netflix Hystrix",
-      "Jenkins",
-      "SQL Server"
-    ],
-    "answer": "Netflix Hystrix"
-  }
-]
+{
+  "categories": [
+ {
+  "id": "git",
+  "name": "Git",
+  "description": "คำสั่งและการใช้งาน Git เบื้องต้น",
+  "icon": "🔀",
+  "color": "hsl(15, 85%, 60%)",
+  "questions": [
+    {
+      "question": "คำสั่ง git init ใช้ทำอะไร?",
+      "options": [
+        "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง",
+        "ดึงข้อมูลจาก remote repository",
+        "ลบ Git repository",
+        "ตรวจสอบสถานะไฟล์"
+      ],
+      "answer": "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง"
+    },
+    {
+      "question": "คุณจะใช้คำสั่งใดเพื่อตรวจสอบสถานะปัจจุบันของการเก็บข้อมูล Git ของคุณ?",
+      "options": [
+        "git log",
+        "git commit",
+        "git status",
+        "git branch"
+      ],
+      "answer": "git status"
+    },
+    {
+      "question": "'branch' ใน Git หมายถึงอะไร?",
+      "options": [
+        "ไฟล์ที่ถูกลบ",
+        "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project",
+        "ข้อความ commit",
+        "ชื่อผู้ใช้งาน"
+      ],
+      "answer": "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project"
+    },
+    {
+      "question": "คุณจะสร้าง branch และเปลี่ยนไปยัง branch นั้นทันทีได้อย่างไร?",
+      "options": [
+        "git branch [branch-name]",
+        "git checkout [branch-name]",
+        "git checkout -b [branch-name]",
+        "git merge [branch-name]"
+      ],
+      "answer": "git checkout -b [branch-name]"
+    },
+    {
+      "question": "วัตถุประสงค์ของ pull request ใน Git คืออะไร?",
+      "options": [
+        "เพื่อลบ branch",
+        "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก",
+        "เพื่อเปลี่ยนชื่อ remote",
+        "เพื่อตรวจสอบประวัติ commit"
+      ],
+      "answer": "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก"
+    },
+    {
+      "question": "คำสั่งใดที่อนุญาตให้คุณเพิ่มการเปลี่ยนแปลงทั้งหมดใน work directory ของคุณไปยังพื้นที่จัดเตรียม สำหรับ commit (staging area)?",
+      "options": [
+        "git commit",
+        "git add .",
+        "git push",
+        "git pull"
+      ],
+      "answer": "git add ."
+    },
+    {
+      "question": "วัตถุประสงค์ของคำสั่ง git log คืออะไร?",
+      "options": [
+        "เพื่อสร้าง branch ใหม่",
+        "เพื่อแสดงประวัติการ commit ของ project ของคุณ",
+        "เพื่อรวม branch",
+        "เพื่อยกเลิกการเปลี่ยนแปลง"
+      ],
+      "answer": "เพื่อแสดงประวัติการ commit ของ project ของคุณ"
+    },
+    {
+      "question": "คุณจะกำหนดค่า user name ของคุณใน Git ได้อย่างไร?",
+      "options": [
+        "git config --global username \"Your Name\"",
+        "git config --global user.name \"Your Name\"",
+        "git set name \"Your Name\"",
+        "git name \"Your Name\""
+      ],
+      "answer": "git config --global user.name \"Your Name\""
+    },
+    {
+      "question": "คำสั่งใดที่ใช้ในการย้อนกลับไปยัง commit ก่อนหน้า?",
+      "options": [
+        "git revert [commit-hash]",
+        "git reset [commit-hash]",
+        "git stash",
+        "ทั้ง A และ B ถูกต้อง"
+      ],
+      "answer": "ทั้ง A และ B ถูกต้อง"
+    },
+    {
+      "question": "คุณจะส่งการ commit ในเครื่องของคุณไปยัง remote Git ได้อย่างไร?",
+      "options": [
+        "git fetch",
+        "git pull origin master",
+        "git push origin master",
+        "git merge"
+      ],
+      "answer": "git push origin master"
+    }
+  ]
+},
+     {
+      "id": "git command",
+      "name": "Git Command",
+      "description": "คำสั่งและการใช้งาน Git เบื้องต้น",
+      "icon": "🔀",
+      "color": "hsl(15, 85%, 60%)",
+      "questions": [
+     
+        {
+          "question": "สัญลักษณ์ ~ (Tilde) ใน Git ใช้ทำอะไร? (เช่น HEAD~2)",
+          "code": "git show HEAD~2",
+          "options": [
+            "เลือก Parent ตัวที่ 2 ของ Merge Commit",
+            "เดินถอยหลัง 2 Commit ตามเส้นตรง (Parent ของ Parent)",
+            "ย้อนเวลาตาม Reflog 2 Step",
+            "ลบ 2 Commit ล่าสุด"
+          ],
+          "answer": "เดินถอยหลัง 2 Commit ตามเส้นตรง (Parent ของ Parent)"
+        },
+        {
+          "question": "หากต้องการเลือก Parent ตัวที่ 2 ของ Merge Commit ต้องใช้สัญลักษณ์ใด?",
+          "code": "M (HEAD) \n|\\\n| * C2b (Parent 2)\n|/ \nC2a (Parent 1)",
+          "options": [
+            "HEAD~2",
+            "HEAD^2",
+            "HEAD@{2}",
+            "HEAD+2"
+          ],
+          "answer": "HEAD^2"
+        },
+        {
+          "question": "Reflog คืออะไร?",
+          "options": [
+            "ประวัติการ Commit ทั้งหมดของ Project",
+            "ประวัติการเคลื่อนไหวของ HEAD (Timeline ส่วนตัว)",
+            "Log ของ Error ที่เกิดขึ้น",
+            "รายชื่อ Branch ทั้งหมด"
+          ],
+          "answer": "ประวัติการเคลื่อนไหวของ HEAD (Timeline ส่วนตัว)"
+        },
+        {
+          "question": "คำสั่งใดใช้สำหรับดูสถานะของ HEAD เมื่อวานนี้?",
+          "options": [
+            "git show HEAD~1",
+            "git show HEAD^yesterday",
+            "git show main@{yesterday}",
+            "git log --yesterday"
+          ],
+          "answer": "git show main@{yesterday}"
+        },
+        {
+          "question": "ข้อใดกล่าวถูกต้องเกี่ยวกับ HEAD@{1}?",
+          "code": "git show HEAD@{1}",
+          "options": [
+            "คือ Commit แรกสุดของ Project",
+            "คือสถานะของ HEAD ก่อนการกระทำล่าสุด (เช่น ก่อน commit หรือ checkout)",
+            "คือ Parent ตัวแรกของ Commit ปัจจุบัน",
+            "คือ Branch ที่ชื่อว่า @{1}"
+          ],
+          "answer": "คือสถานะของ HEAD ก่อนการกระทำล่าสุด (เช่น ก่อน commit หรือ checkout)"
+        },
+        {
+          "question": "คำสั่ง git show v1.0^{commit} มีความหมายว่าอย่างไร?",
+          "options": [
+            "สร้าง Tag ชื่อ v1.0",
+            "ลบ Tag v1.0",
+            "ดู Commit Object ที่ Tag v1.0 ชี้อยู่",
+            "เปลี่ยนชื่อ Tag เป็น commit"
+          ],
+          "answer": "ดู Commit Object ที่ Tag v1.0 ชี้อยู่"
+        },
+        {
+          "question": "หากต้องการย้อน HEAD กลับไป 2 step ใน Reflog และ Reset ไฟล์ทั้งหมด ต้องใช้คำสั่งใด?",
+          "code": "git reset --hard ???",
+          "options": [
+            "HEAD~2",
+            "HEAD^2",
+            "HEAD@{2}",
+            "HEAD+2"
+          ],
+          "answer": "HEAD@{2}"
+        }
+      ]
+    },
+    {
+      "id": "ddd",
+      "name": "Domain-Driven Design",
+      "description": "หลักการออกแบบซอฟต์แวร์แบบ DDD",
+      "icon": "🎯",
+      "color": "hsl(200, 85%, 60%)",
+      "questions": [
+        {
+          "question": "DDD (Domain-Drive Design) คืออะไร",
+          "options": [
+            "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลฐานข้อมูล",
+            "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลโดเมน",
+            "วิธีการพัฒนาซอฟต์แวร์ที่เน้นอินเทอร์เฟซผู้ใช้",
+            "วิธีการทดสอบซอฟต์แวร์"
+          ],
+          "answer": "วิธีการพัฒนาซอฟต์แวร์ที่เน้นการสร้างโมเดลโดเมน"
+        },
+        {
+          "question": "DDD ช่วยแก้ปัญหาอะไรได้บ้าง",
+          "options": [
+            "ปัญหาความเร็วของอินเทอร์เน็ต",
+            "ปัญหาการจัดการ project",
+            "ปัญหาทางธุรกิจที่ซับซ้อน",
+            "ปัญหาการจัดเก็บไฟล์"
+          ],
+          "answer": "ปัญหาทางธุรกิจที่ซับซ้อน"
+        },
+        {
+          "question": "ข้อใดคือประโยชน์หลักของ DDD",
+          "options": [
+            "ติดตั้งง่าย",
+            "ราคาถูก",
+            "โค้ดที่ชัดเจน อ่านง่าย และทดสอบได้",
+            "ประสิทธิภาพการทำงานที่รวดเร็ว"
+          ],
+          "answer": "โค้ดที่ชัดเจน อ่านง่าย และทดสอบได้"
+        },
+        {
+          "question": "Subdomain แบ่งออกเป็นประเภทใดบ้าง",
+          "options": [
+            "Internal, External",
+            "Core, Generic, Supporting",
+            "Primary, Secondary",
+            "High-level, Low-level"
+          ],
+          "answer": "Core, Generic, Supporting"
+        },
+        {
+          "question": "Bounded Context มีหน้าที่อะไร",
+          "options": [
+            "สร้าง UI",
+            "กำหนดขอบเขตที่ชัดเจนสำหรับการใช้งานโมเดลเฉพาะ",
+            "จัดการฐานข้อมูล",
+            "เขียน Unit Test"
+          ],
+          "answer": "กำหนดขอบเขตที่ชัดเจนสำหรับการใช้งานโมเดลเฉพาะ"
+        },
+        {
+          "question": "การออกแบบเชิงกลยุทธ์ช่วยในเรื่องใด",
+          "options": [
+            "เร่งความเร็วในการโหลดหน้าเว็บ",
+            "แบ่งปัญหาธุรกิจที่ซับซ้อนออกเป็นส่วนเล็ก ๆ ที่ชัดเจน",
+            "จัดการการเข้าถึงฐานข้อมูล",
+            "ทำ Unit Test อัตโนมัติ"
+          ],
+          "answer": "แบ่งปัญหาธุรกิจที่ซับซ้อนออกเป็นส่วนเล็ก ๆ ที่ชัดเจน"
+        },
+        {
+          "question": "EventStorming คืออะไร",
+          "options": [
+            "กระบวนการออกแบบฐานข้อมูล",
+            "กระบวนการรวบรวมกิจกรรมในโดเมนเพื่อสร้างภาพรวมของระบบ",
+            "กระบวนการ deploy code",
+            "กระบวนการเขียน Unit Test"
+          ],
+          "answer": "กระบวนการรวบรวมกิจกรรมในโดเมนเพื่อสร้างภาพรวมของระบบ"
+        },
+        {
+          "question": "ขั้นตอนแรกใน EventStorming คืออะไร",
+          "options": [
+            "ออกแบบ UI",
+            "เขียนโค้ด",
+            "สร้าง Domain Events",
+            "สร้าง database schema"
+          ],
+          "answer": "สร้าง Domain Events"
+        },
+        {
+          "question": "ควรสร้าง User Storie",
+          "options": [
+            "จำเป็น",
+            "ไม่จำเป็น",
+            "บางครั้ง",
+            "ขึ้นอยู่กับขนาด project"
+          ],
+          "answer": "ไม่จำเป็น"
+        },
+        {
+          "question": "Entity ใน DDD คืออะไร",
+          "options": [
+            "วัตถุที่ไม่มีตัวตน",
+            "วัตถุที่มีตัวตนและวงจรชีวิตเฉพาะ",
+            "คลาสฐานข้อมูล",
+            "User interface component"
+          ],
+          "answer": "วัตถุที่มีตัวตนและวงจรชีวิตเฉพาะ"
+        },
+        {
+          "question": "Aggregate Root มีบทบาทอะไร",
+          "options": [
+            "เป็นเพียง Data Transfer Object",
+            "ช่วยควบคุมการทำงานของ Aggregate ทั้งหมด",
+            "เป็นคลาส Utility",
+            "จัดการ Network connection"
+          ],
+          "answer": "ช่วยควบคุมการทำงานของ Aggregate ทั้งหมด"
+        },
+        {
+          "question": "Entity สามารถเป็นส่วนหนึ่งของหลาย Aggregate ได้หรือไม่",
+          "options": [
+            "ได้",
+            "ไม่ได้ เพราะ Entity ควรอยู่ใน Aggregate เดียว",
+            "ได้เฉพาะ Entity ที่เป็น Generic",
+            "ได้เฉพาะ Entity ที่เป็น Core"
+          ],
+          "answer": "ไม่ได้ เพราะ Entity ควรอยู่ใน Aggregate เดียว"
+        },
+        {
+          "question": "เราควรใช้ Pattern ทั้งหมดของ DDD ในทุกโครงการหรือไม่?",
+          "options": [
+            "ควรใช้ทั้งหมดเสมอ",
+            "ไม่ควรใช้เลย",
+            "ควรเลือกใช้ตามความเหมาะสมของโครงการ",
+            "ควรใช้เฉพาะในโครงการขนาดใหญ่เท่านั้น"
+          ],
+          "answer": "ควรเลือกใช้ตามความเหมาะสมของโครงการ"
+        }
+      ]
+    },
+    {
+      "id": "ooad",
+      "name": "OOAD",
+      "description": "Object-Oriented Analysis and Design",
+      "icon": "📐",
+      "color": "hsl(280, 85%, 60%)",
+      "questions": [
+        {
+          "question": "ข้อใดไม่ใช่หลักการสำคัญของ OOAD",
+          "options": [
+            "Encapsulation",
+            "Inheritance",
+            "Polymorphism",
+            "Coupling"
+          ],
+          "answer": "Coupling"
+        },
+        {
+          "question": "เป้าหมายหลักของ OOA คืออะไร",
+          "options": [
+            "วิเคราะห์ความต้องการของระบบ",
+            "ออกแบบโครงสร้างฐานข้อมูล",
+            "เขียน Unit Test",
+            "พัฒนา User Interface"
+          ],
+          "answer": "วิเคราะห์ความต้องการของระบบ"
+        },
+        {
+          "question": "ผลลัพธ์ของ OOD คืออะไร",
+          "options": [
+            "Requirement Document",
+            "UML class diagram",
+            "Test report",
+            "Deployment script"
+          ],
+          "answer": "UML class diagram"
+        },
+        {
+          "question": "ข้อดีของการใช้ OOAD ในการพัฒนาซอฟต์แวร์",
+          "options": [
+            "ช่วยในการจัดการความซับซ้อน",
+            "ช่วยลดการซ้ำซ้อนของโค้ด",
+            "โค้ดมีความยืดหยุ่นและนำกลับมาใช้ใหม่ได้ง่าย",
+            "ข้อดีทั้งหมดข้างต้น"
+          ],
+          "answer": "ข้อดีทั้งหมดข้างต้น"
+        },
+        {
+          "question": "Use Case อธิบายอะไร",
+          "options": [
+            "โครงสร้างของคลาสในระบบ",
+            "การทำงานระหว่าง User กับระบบในมุมมองของ user",
+            "การทำงานภายในของระบบ",
+            "ความสัมพันธ์ระหว่างฐานข้อมูล"
+          ],
+          "answer": "การทำงานระหว่าง User กับระบบในมุมมองของ user"
+        },
+        {
+          "question": "Domain Model แสดงอะไร",
+          "options": [
+            "ลำดับการทำงานของโปรแกรม",
+            "หน้าจอผู้ใช้",
+            "Object และ Relationship ในระบบ ในมุมมองของ problem domain",
+            "โครงสร้าง Network"
+          ],
+          "answer": "Object และ Relationship ในระบบ ในมุมมองของ problem domain"
+        },
+        {
+          "question": "System Sequence Diagram แสดงอะไร",
+          "options": [
+            "โครงสร้างของฐานข้อมูล",
+            "การทำงานระหว่าง User กับระบบในมุมมองของ user",
+            "ลำดับการทำงานระหว่าง User และระบบ ในมุมมองของระบบ",
+            "ความรับผิดชอบของคลาส"
+          ],
+          "answer": "ลำดับการทำงานระหว่าง User และระบบ ในมุมมองของระบบ"
+        }
+      ]
+    },
+    {
+      "id": "oop",
+      "name": "OOP & SOLID",
+      "description": "Object-Oriented Programming และหลักการ SOLID",
+      "icon": "🔷",
+      "color": "hsl(140, 85%, 50%)",
+      "questions": [
+        {
+          "question": "ลักษณะสำคัญของ OOP มีอะไรบ้าง",
+          "options": [
+            "Encapsulation",
+            "Inheritance",
+            "Polymorphism",
+            "ทั้งหมดข้างต้น (Encapsulation,Inheritance,Polymorphism)"
+          ],
+          "answer": "ทั้งหมดข้างต้น (Encapsulation,Inheritance,Polymorphism)"
+        },
+        {
+          "question": "Single Responsibility Principle หมายถึงอะไร",
+          "options": [
+            "class ควรมีหลายความรับผิดชอบ",
+            "class ควรมีความรับผิดชอบเพียงอย่างเดียว",
+            "method ควรมีความรับผิดชอบเพียงอย่างเดียว",
+            "project ควรมีความรับผิดชอบเพียงอย่างเดียว"
+          ],
+          "answer": "class ควรมีความรับผิดชอบเพียงอย่างเดียว"
+        },
+        {
+          "question": "คุณสมบัติที่ระบุว่าคลาสควรเปิดสำหรับการขยาย แต่ปิดสำหรับการแก้ไข เป็นคุณสมบัติของ SOLID principle ข้อใด",
+          "options": [
+            "Single Responsibility Principle",
+            "Open/Closed principle",
+            "Liskov Substitution Principle",
+            "Interface Segregation Principle"
+          ],
+          "answer": "Open/Closed principle"
+        },
+        {
+          "question": "ทีมของคุณเริ่มเขียนระบบสำหรับจัดการที่จอดรถโดยใช้ภาษาโปรแกรมที่รองรับ OOP และออกแบบ class hierarchy ไว้ดังนี้\n\nObject ของ class ใดสามารถถูก assign ให้กับตัวแปรที่มี type เป็น Bicycle ได้ (เลือกคำตอบที่ถูกต้องทั้งหมด)",
+          "code": "class Vehicle {}\nclass Car extends Vehicle {}\nclass Bicycle extends Vehicle {}\nclass Plane extends Vehicle {}\nclass Helicopter extends Plane {}\nclass MountainBike extends Bicycle {}\nclass Downhill extends MountainBike {}",
+          "options": [
+            "Vehicle",
+            "Car",
+            "MountainBike",
+            "Plane"
+          ],
+          "answer": "MountainBike"
+        },
+        {
+          "question": "ระบบใดต่อไปนี้ เหมาะสมที่จะใช้คุณสมบัติการการสืบทอดใน OOP",
+          "options": [
+            "ระบบคำนวณภาษีมูลค่าเพิ่ม",
+            "ระบบธนาคารที่มีประเภทบัญชีเงินฝากต่างๆ เช่น บัญชีออมทรัพย์, บัญชีเงินฝากประจำ, บัญชีกระแสรายวัน",
+            "ระบบจัดการไฟล์ในคอมพิวเตอร์",
+            "ระบบส่งอีเมล"
+          ],
+          "answer": "ระบบธนาคารที่มีประเภทบัญชีเงินฝากต่างๆ เช่น บัญชีออมทรัพย์, บัญชีเงินฝากประจำ, บัญชีกระแสรายวัน"
+        },
+        {
+          "question": "Interface Segregation Principle หมายถึงอะไร",
+          "options": [
+            "class ควรมี interface ขนาดใหญ่",
+            "class ควรมี interface ที่ชัดเจน",
+            "interface ควรมี method เพียงเดียว",
+            "interface ไม่ควรมี method เลย"
+          ],
+          "answer": "class ควรมี interface ที่ชัดเจน"
+        },
+        {
+          "question": "Dependency Inversion Principle หมายถึงอะไร",
+          "options": [
+            "โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ",
+            "โมดูลที่มีลำดับสูงควรพึ่งพา abstraction",
+            "โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction",
+            "ทั้งหมดข้างต้น (โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ,โมดูลที่มีลำดับสูงควรพึ่งพา abstraction,โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction)"
+          ],
+          "answer": "ทั้งหมดข้างต้น (โมดูลที่มีลำดับสูงไม่ควรพึ่งพาโมดูลที่มีลำดับต่ำ,โมดูลที่มีลำดับสูงควรพึ่งพา abstraction,โมดูลที่มีลำดับต่ำควรพึ่งพา abstraction)"
+        },
+        {
+          "question": "เหตุการณ์ใดที่สามารถเป็นตัวบ่งชี้ได้ว่า คอมโพเนนต์นั้นอาจมีความรับผิดชอบที่มากเกินไป",
+          "options": [
+            "Unit test ผ่านเสมอ",
+            "การเขียน unit test เริ่มมีความซับซ้อนมากขึ้น เนื่องจากมีการ mock คลาสที่เยอะเกินไป",
+            "ความเร็วของ build time ลดลง",
+            "จำนวนบรรทัดของโค้ดลดลง"
+          ],
+          "answer": "การเขียน unit test เริ่มมีความซับซ้อนมากขึ้น เนื่องจากมีการ mock คลาสที่เยอะเกินไป"
+        },
+        {
+          "question": "จากโค้ดตัวอย่าง Class นี้มีการทำงานที่ผิดหลักการใดของ SOLID?",
+          "code": "class UserManager {\n  authenticate(user, password) {\n    // ... check credentials\n  }\n  \n  saveToDatabase(user) {\n    // ... SQL insert\n  }\n  \n  sendEmail(user, message) {\n    // ... SMTP logic\n  }\n}",
+          "options": [
+            "Single Responsibility Principle (SRP)",
+            "Open/Closed Principle (OCP)",
+            "Liskov Substitution Principle (LSP)",
+            "Dependency Inversion Principle (DIP)"
+          ],
+          "answer": "Single Responsibility Principle (SRP)"
+        },
+        {
+          "question": "หากต้องการเพิ่ม Shape แบบใหม่โดยไม่ต้องแก้ไขโค้ดเดิม ควรปรับปรุงโค้ดนี้ตามหลักการใด?",
+          "code": "class AreaCalculator {\n  calculate(shapes) {\n    let area = 0;\n    for (let shape of shapes) {\n      if (shape.type === 'circle') {\n        area += Math.PI * shape.radius ** 2;\n      } else if (shape.type === 'square') {\n        area += shape.side ** 2;\n      }\n    }\n    return area;\n  }\n}",
+          "options": [
+            "Single Responsibility Principle (SRP)",
+            "Open/Closed Principle (OCP)",
+            "Interface Segregation Principle (ISP)",
+            "Dependency Inversion Principle (DIP)"
+          ],
+          "answer": "Open/Closed Principle (OCP)"
+        },
+        {
+          "question": "การที่ Class Ostrich (นกกระจอกเทศ) ไม่สามารถบินได้ (throw Error) ทั้งที่สืบทอดจาก Bird เป็นการละเมิดหลักการใด?",
+          "code": "class Bird {\n  fly() { /* ... */ }\n}\n\nclass Ostrich extends Bird {\n  fly() {\n    throw new Error(\"I cannot fly!\");\n  }\n}",
+          "options": [
+            "Single Responsibility Principle (SRP)",
+            "Liskov Substitution Principle (LSP)",
+            "Interface Segregation Principle (ISP)",
+            "Dependency Inversion Principle (DIP)"
+          ],
+          "answer": "Liskov Substitution Principle (LSP)"
+        },
+        {
+          "question": "การบังคับให้ Class ต้อง Implement method ที่ไม่ได้ใช้งาน เป็นการละเมิดหลักการใด?",
+          "code": "interface Worker {\n  work();\n  eat();\n}\n\nclass Robot implements Worker {\n  work() { /* working */ }\n  eat() {\n    // Robot doesn't eat!\n    throw new Error(\"Not supported\");\n  }\n}",
+          "options": [
+            "Single Responsibility Principle (SRP)",
+            "Open/Closed Principle (OCP)",
+            "Liskov Substitution Principle (LSP)",
+            "Interface Segregation Principle (ISP)"
+          ],
+          "answer": "Interface Segregation Principle (ISP)"
+        },
+        {
+          "question": "การที่ Switch ผูกติดกับ LightBulb โดยตรง แทนที่จะผ่าน Interface เป็นการละเมิดหลักการใด?",
+          "code": "class LightBulb {\n  turnOn() { /*...*/ }\n  turnOff() { /*...*/ }\n}\n\nclass Switch {\n  constructor() {\n    this.bulb = new LightBulb(); // Direct dependency\n  }\n  toggle() {\n    this.bulb.turnOn();\n  }\n}",
+          "options": [
+            "Single Responsibility Principle (SRP)",
+            "Open/Closed Principle (OCP)",
+            "Liskov Substitution Principle (LSP)",
+            "Dependency Inversion Principle (DIP)"
+          ],
+          "answer": "Dependency Inversion Principle (DIP)"
+        }
+      ]
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD",
+      "description": "Continuous Integration & Continuous Deployment",
+      "icon": "🔄",
+      "color": "hsl(40, 85%, 60%)",
+      "questions": [
+        {
+          "question": "ข้อใดเป็น pipeline ที่ไม่ควรทำ",
+          "options": [
+            "build > unit-test > security-test > deploy-dev > deploy-prd",
+            "security-test > unit-test > build > deploy-prd > deploy-dev",
+            "unit-test > build > deploy-dev > security-test > deploy-prd",
+            "build > unit-test > deploy-dev > security-test > deploy-prd"
+          ],
+          "answer": "security-test > unit-test > build > deploy-prd > deploy-dev"
+        },
+        {
+          "question": "azure repo เปรียบได้กับ service ใด",
+          "options": [
+            "Jira",
+            "github",
+            "Docker",
+            "Jenkins"
+          ],
+          "answer": "github"
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Software Architecture",
+      "description": "Monolithic, Microservices และ Design Patterns",
+      "icon": "🏗️",
+      "color": "hsl(320, 85%, 60%)",
+      "questions": [
+        {
+          "question": "Monolithic Architecture คืออะไร?",
+          "options": [
+            "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่แบ่งแอปพลิเคชันออกเป็นส่วนเล็กๆ",
+            "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่สร้างแอปพลิเคชันขนาดใหญ่เป็นส่วนเดียวและทำงานร่วมกันทั้งหมด",
+            "รูปแบบสถาปัตยกรรมสำหรับฐานข้อมูลเท่านั้น",
+            "รูปแบบการออกแบบส่วนต่อประสานผู้ใช้"
+          ],
+          "answer": "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่สร้างแอปพลิเคชันขนาดใหญ่เป็นส่วนเดียวและทำงานร่วมกันทั้งหมด"
+        },
+        {
+          "question": "รูปแบบสถาปัตยกรรมซอฟต์แวร์ที่แบ่งแอปพลิเคชันขนาดใหญ่ออกเป็นส่วนเล็ก ๆ ที่เป็นอิสระ คืออะไร?",
+          "options": [
+            "Monolithic Architecture",
+            "Microservices Architecture",
+            "Layered Architecture",
+            "Event-Driven Architecture"
+          ],
+          "answer": "Microservices Architecture"
+        },
+        {
+          "question": "ข้อใดไม่ใช่ประโยชน์ของ Microservices?",
+          "options": [
+            "Independent deployment (การปรับใช้แบบอิสระ)",
+            "Technology diversity (ความหลากหลายทางเทคโนโลยี)",
+            "Slower time to market (ใช้เวลาในการออกสู่ตลาดช้าลง)",
+            "Fault isolation (การแยกความผิดพลาด)"
+          ],
+          "answer": "Slower time to market (ใช้เวลาในการออกสู่ตลาดช้าลง)"
+        },
+        {
+          "question": "ข้อใดเป็น challenge ของ Microservices?",
+          "options": [
+            "การออกแบบ UI",
+            "ความเร็วของคอมไพเลอร์",
+            "การสื่อสารกันระหว่างเซอร์วิส",
+            "การตั้งค่า environment variable"
+          ],
+          "answer": "การสื่อสารกันระหว่างเซอร์วิส"
+        },
+        {
+          "question": "หลักการใดเป็นพื้นฐานของ Microservices design?",
+          "options": [
+            "Tight Coupling",
+            "Centralization",
+            "Encapsulation (การห่อหุ้ม)",
+            "High Cohesion"
+          ],
+          "answer": "Encapsulation (การห่อหุ้ม)"
+        },
+        {
+          "question": "ข้อใดต่อไปนี้เป็นข้อดีของ distributed system?",
+          "options": [
+            "ง่ายต่อการ debug",
+            "Single point of failure",
+            "ไม่มีข้อใดถูก",
+            "ง่ายต่อการ deploy"
+          ],
+          "answer": "ไม่มีข้อใดถูก"
+        },
+        {
+          "question": "คุณลักษณะใดไม่ใช่ software quality ของ microservices?",
+          "options": [
+            "Scalability",
+            "Resilience",
+            "Centralization (การรวมศูนย์)",
+            "Agility"
+          ],
+          "answer": "Centralization (การรวมศูนย์)"
+        },
+        {
+          "question": "วิธีใดไม่ใช่ microservices communication?",
+          "options": [
+            "REST",
+            "SQL",
+            "gRPC",
+            "Messaging Queue"
+          ],
+          "answer": "SQL"
+        },
+        {
+          "question": "ข้อใดคือ challenge ของการทำ traditional transactions ใน microservices?",
+          "options": [
+            "ความท้าทายในการรักษาความเป็น Atomicity ข้ามบริการ",
+            "ความท้าทายในการรักษาความเป็น Consistency ข้ามบริการ",
+            "Both B and C (น่าจะหมายถึง ความท้าทายในการรักษาความเป็น Atomicity และ Consistency ข้ามบริการ)",
+            "ปัญหาความเร็วของ Network"
+          ],
+          "answer": "Both B and C (น่าจะหมายถึง ความท้าทายในการรักษาความเป็น Atomicity และ Consistency ข้ามบริการ)"
+        },
+        {
+          "question": "วัตถุประสงค์ของ circuit breaker คืออะไร?",
+          "options": [
+            "เพื่อเพิ่มความเร็วในการโหลดหน้าเว็บ",
+            "เพื่อจัดการความล้มเหลวของ network และป้องกันไม่ให้การเรียกใช้บริการที่ล้มเหลวติดต่อกันซ้ำ ๆ ทำให้ทรัพยากรหมดไป",
+            "เพื่อทำ Load Balancing",
+            "เพื่อตรวจสอบการใช้งานของผู้ใช้"
+          ],
+          "answer": "เพื่อจัดการความล้มเหลวของ network และป้องกันไม่ให้การเรียกใช้บริการที่ล้มเหลวติดต่อกันซ้ำ ๆ ทำให้ทรัพยากรหมดไป"
+        },
+        {
+          "question": "ข้อใดไม่ใช่ resilience pattern?",
+          "options": [
+            "Circuit Breaker",
+            "Retry",
+            "Bulkhead",
+            "Dependency injection (เป็นรูปแบบการออกแบบโค้ด ไม่ใช่รูปแบบการจัดการความยืดหยุ่นของระบบ)"
+          ],
+          "answer": "Dependency injection (เป็นรูปแบบการออกแบบโค้ด ไม่ใช่รูปแบบการจัดการความยืดหยุ่นของระบบ)"
+        },
+        {
+          "question": "ข้อดีของการสื่อสารแบบ asynchronous communication คืออะไร?",
+          "options": [
+            "ง่ายต่อการ Debug",
+            "Scale ง่ายและทนทานต่อความผิดพลาด",
+            "รับประกันความเร็วที่แน่นอน",
+            "เหมาะกับการทำ CRUD operations"
+          ],
+          "answer": "Scale ง่ายและทนทานต่อความผิดพลาด"
+        },
+        {
+          "question": "วิธีการสื่อสารใดที่เหมาะกับการทำ CRUD operations?",
+          "options": [
+            "WebSocket",
+            "REST (Representational State Transfer)",
+            "Message Queue",
+            "gRPC"
+          ],
+          "answer": "REST (Representational State Transfer)"
+        },
+        {
+          "question": "วิธีการสื่อสารใดที่เหมาะกับการทำ real-time applications เช่น ระบบ chat?",
+          "options": [
+            "REST",
+            "SOAP",
+            "WebSocket",
+            "FTP"
+          ],
+          "answer": "WebSocket"
+        },
+        {
+          "question": "แอพแชทเช่น WhatsApp ใช้ไมโครเซอร์วิสเพื่อเชื่อมต่อผู้ใช้แบบเรียลไทม์หลายพันคนเข้าด้วยกัน พวกเขามีข้อบกพร่องในการออกแบบไมโครเซอร์วิสที่การอ่านและเขียนทั้งหมดผ่าน service เดียวคือ service A ซึ่งทำให้ service A ทำงานไม่เสถียรและล่มอยู่บ่อยๆ เลือกข้อที่คุณที่คิดว่าจะช่วยแก้ปัญหานี้?",
+          "options": [
+            "เพิ่ม RAM ให้กับ Service A",
+            "ลดจำนวนผู้ใช้",
+            "แยก API สำหรับการอ่าน (Read) และการเขียน (Write) ออกไปอยู่คนละ service (เป็นหลักการของ CQRS - Command Query Responsibility Segregation)",
+            "ใช้ฐานข้อมูลแบบ Monolithic"
+          ],
+          "answer": "แยก API สำหรับการอ่าน (Read) และการเขียน (Write) ออกไปอยู่คนละ service (เป็นหลักการของ CQRS - Command Query Responsibility Segregation)"
+        },
+        {
+          "question": "แอพพลิเคชั่นของธนาคารแห่งหนึ่ง มีการออกแบบระบบโดยใช้หลักการไมโครเซอร์วิส ธนาคารแห่งนี้มีการตรวจสอบการใช้งานของผู้ใช้แล้วพบว่า service transfer ซึ่งใช้ในการโอนและชำระเงินมีการใช้งานที่สูงตลอดเวลาทำให้เกิดการล่มอยู่บ่อยครั้ง เลือกข้อที่คุณที่คิดว่าจะช่วยแก้ปัญหานี้?",
+          "options": [
+            "รวม service transfer เข้ากับ service อื่นๆ",
+            "เปลี่ยนไปใช้ Monolithic Architecture",
+            "แยก API สำหรับการโอนและจ่ายเงินออกไปอยู่คนละ service (เพื่อลดภาระงานบน service เดียว)",
+            "ลดความถี่ในการทำ Unit Test"
+          ],
+          "answer": "แยก API สำหรับการโอนและจ่ายเงินออกไปอยู่คนละ service (เพื่อลดภาระงานบน service เดียว)"
+        },
+        {
+          "question": "เทคนิคใดที่สามารถใช้จัดการกับความผิดพลาดที่เกิดขึ้นกับระบบอื่น?",
+          "options": [
+            "Load Balancer",
+            "Circuit Breaker",
+            "Caching",
+            "Service Mesh"
+          ],
+          "answer": "Circuit Breaker"
+        },
+        {
+          "question": "คุณลักษณะใดที่เป็นลักษณะของข้อมูลใน microservices architecture?",
+          "options": [
+            "Centralized database (ฐานข้อมูลรวมศูนย์)",
+            "Shared database schema (การใช้ schema ฐานข้อมูลร่วมกัน)",
+            "Decentralized data ownership (การกระจายอำนาจการเป็นเจ้าของข้อมูล)",
+            "Strict consistency across all services (ความสอดคล้องอย่างเข้มงวดในทุกบริการ)"
+          ],
+          "answer": "Decentralized data ownership (การกระจายอำนาจการเป็นเจ้าของข้อมูล)"
+        },
+        {
+          "question": "รูปแบบใดที่ช่วยเพิ่มประสิทธิภาพในการ read แต่เพิ่มความซับซ้อนในการบำรุงรักษา?",
+          "options": [
+            "Normalization",
+            "Sharding",
+            "Denormalization (การลดทอนความเป็นรูปแบบปกติของฐานข้อมูล)",
+            "Replication"
+          ],
+          "answer": "Denormalization (การลดทอนความเป็นรูปแบบปกติของฐานข้อมูล)"
+        },
+        {
+          "question": "ฐานข้อมูลประเภทใดที่เหมาะสำหรับการ read/write ที่ต้องการความไวและสามารถทำ horizontal scale ได้?",
+          "options": [
+            "Relational Database",
+            "Key-value (เช่น Redis, DynamoDB)",
+            "Graph Database",
+            "Document Database"
+          ],
+          "answer": "Key-value (เช่น Redis, DynamoDB)"
+        },
+        {
+          "question": "วัตถุประสงค์หลักของ service discovery คืออะไร?",
+          "options": [
+            "Static routing (การกำหนดเส้นทางแบบคงที่)",
+            "Manual deployment (การปรับใช้ด้วยตนเอง)",
+            "Dynamic routing (การค้นหาและกำหนดเส้นทางไปยังบริการแบบไดนามิก)",
+            "Centralized logging (การบันทึกแบบรวมศูนย์)"
+          ],
+          "answer": "Dynamic routing (การค้นหาและกำหนดเส้นทางไปยังบริการแบบไดนามิก)"
+        },
+        {
+          "question": "เครื่องมือใดที่ใช้ทำ resilience ใน microservices?",
+          "options": [
+            "Jira",
+            "Netflix Hystrix",
+            "Jenkins",
+            "SQL Server"
+          ],
+          "answer": "Netflix Hystrix"
+        }
+      ]
+    },
+    {
+      "id": "api-design",
+      "name": "API Design",
+      "description": "หลักการออกแบบ RESTful API และ Best Practices",
+      "icon": "🔌",
+      "color": "hsl(200, 95%, 40%)",
+      "questions": [
+        {
+          "question": "หัวใจหลักของ REST API คือการมองทุกอย่างเป็นอะไร?",
+          "options": [
+            "การกระทำ (Action)",
+            "ทรัพยากร (Resource)",
+            "ฐานข้อมูล (Database)",
+            "ฟังก์ชัน (Function)"
+          ],
+          "answer": "ทรัพยากร (Resource)"
+        },
+        {
+          "question": "HTTP Method ใดใช้สำหรับ 'สร้าง' Collection Resource ใหม่?",
+          "code": "POST /users HTTP/1.1\nHost: api.example.com\nContent-Type: application/json\n\n{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\"\n}",
+          "options": [
+            "GET",
+            "PUT",
+            "POST",
+            "PATCH"
+          ],
+          "answer": "POST"
+        },
+        {
+          "question": "HTTP Method ใดใช้สำหรับ 'อัพเดททับ' Individual Resource เดิมทั้งหมด?",
+          "code": "PUT /users/123 HTTP/1.1\nHost: api.example.com\nContent-Type: application/json\n\n{\n  \"name\": \"John Doe Updated\",\n  \"email\": \"john@example.com\",\n  \"age\": 30\n}",
+          "options": [
+            "POST",
+            "PATCH",
+            "PUT",
+            "GET"
+          ],
+          "answer": "PUT"
+        },
+        {
+          "question": "ตาม Best Practice การตั้งชื่อ Endpoint ควรใช้รูปแบบใด?",
+          "code": "// Good Practice\nGET /users\nGET /users/123\n\n// Bad Practice\nGET /getUsers\nGET /getUserById?id=123",
+          "options": [
+            "คำกริยา (Verb)",
+            "คำนามเอกพจน์ (Singular Noun)",
+            "คำนามพหูพจน์ (Plural Noun)",
+            "คำคุณศัพท์ (Adjective)"
+          ],
+          "answer": "คำนามพหูพจน์ (Plural Noun)"
+        },
+        {
+          "question": "ข้อใดคือตัวอย่าง URL ที่ดีตามหลัก RESTful?",
+          "code": "// RESTful URL Structure\nGET /resource\nPOST /resource\nGET /resource/{id}\nPUT /resource/{id}\nDELETE /resource/{id}",
+          "options": [
+            "GET /getUsers",
+            "POST /create-user",
+            "GET /users",
+            "DELETE /deleteUser/1"
+          ],
+          "answer": "GET /users"
+        },
+        {
+          "question": "ควรใช้เครื่องหมายใดคั่นคำใน URL เพื่อความอ่านง่ายและเป็นมาตรฐาน?",
+          "code": "// Which one is better?\n\n1. /api/user-profiles/123 (Recommended)\n2. /api/user_profiles/123\n3. /api/userProfiles/123",
+          "options": [
+            "Underscore (_)",
+            "CamelCase",
+            "Hyphen (-)",
+            "Space ( )"
+          ],
+          "answer": "Hyphen (-)"
+        },
+        {
+          "question": "หากต้องการดึงข้อมูล orders ทั้งหมดของ customer ID 123 ควรออกแบบ URL อย่างไร?",
+          "code": "// Nested Resource Relationship\n// Customer (Parent) -> Orders (Child)\n\nGET /customers/123/orders",
+          "options": [
+            "GET /orders?customer_id=123",
+            "GET /customers/123/orders",
+            "GET /customers/orders/123",
+            "POST /orders/get/123"
+          ],
+          "answer": "GET /customers/123/orders"
+        },
+        {
+          "question": "Query Parameters ใช้ทำอะไร?",
+          "options": [
+            "สร้าง Resource ใหม่",
+            "ลบ Resource",
+            "จัดการผลลัพธ์ เช่น กรอง หรือ จัดเรียง",
+            "เปลี่ยนชื่อ Resource"
+          ],
+          "answer": "จัดการผลลัพธ์ เช่น กรอง หรือ จัดเรียง"
+        },
+        {
+          "question": "หากต้องการดึงข้อมูล products โดยเรียงตามราคาจากน้อยไปมาก ควรใช้ URL ใด?",
+          "options": [
+            "GET /products/sort/price",
+            "GET /products?order=price",
+            "GET /products?sort=price",
+            "GET /products?sort=-price"
+          ],
+          "answer": "GET /products?sort=price"
+        },
+        {
+          "question": "การทำ Versioning ของ API นิยมทำอย่างไร?",
+          "options": [
+            "ใส่เวอร์ชันใน Header",
+            "ใส่เวอร์ชันใน Body",
+            "ระบุเวอร์ชันใน Path ของ URL",
+            "ไม่จำเป็นต้องระบุเวอร์ชัน"
+          ],
+          "answer": "ระบุเวอร์ชันใน Path ของ URL"
+        }
+      ]
+    },
+    {
+      "id": "clean-code",
+      "name": "Code Quality",
+      "description": "หลักการเขียน Clean Code และ Best Practices",
+      "icon": "✨",
+      "color": "hsl(160, 85%, 45%)",
+      "questions": [
+        {
+          "question": "หลักการสำคัญที่สุดของการตั้งชื่อ (Meaningful Names) คืออะไร?",
+          "options": [
+            "ชื่อต้องสั้นที่สุด",
+            "ชื่อต้องสื่อความหมายชัดเจนว่าทำหน้าที่อะไร",
+            "ชื่อต้องมีตัวเลขประกอบ",
+            "ชื่อต้องเป็นภาษาอังกฤษเท่านั้น"
+          ],
+          "answer": "ชื่อต้องสื่อความหมายชัดเจนว่าทำหน้าที่อะไร"
+        },
+        {
+          "question": "การตั้งชื่อตัวแปรว่า 'accountList' ทั้งที่ข้อมูลไม่ได้เก็บเป็น List ถือเป็นการละเมิดกฎข้อใด?",
+          "code": "// Bad Practice\nString accountList = \"User1, User2\";\n\n// Good Practice\nString accountGroup = \"User1, User2\";",
+          "options": [
+            "Use Pronounceable Names (ใช้อ่านออกเสียงได้)",
+            "Avoid Disinformation (ไม่ทำให้เข้าใจผิด)",
+            "Use Searchable Names (ค้นหาได้ง่าย)",
+            "Class Names (ชื่อคลาส)"
+          ],
+          "answer": "Avoid Disinformation (ไม่ทำให้เข้าใจผิด)"
+        },
+        {
+          "question": "การตั้งชื่อตัวแปรแบบ a1, a2, a3 เป็นสิ่งที่ไม่ควรทำเพราะเหตุใด?",
+          "code": "public void copy(char a1[], char a2[]) {\n  for (int i = 0; i < a1.length; i++) {\n    a2[i] = a1[i];\n  }\n}",
+          "options": [
+            "มันสั้นเกินไป",
+            "มันไม่มีความแตกต่างอย่างมีความหมาย (Non-informative)",
+            "มันพิมพ์ยาก",
+            "คอมไพเลอร์ไม่รองรับ"
+          ],
+          "answer": "มันไม่มีความแตกต่างอย่างมีความหมาย (Non-informative)"
+        },
+        {
+          "question": "ทำไมเราควรตั้งชื่อตัวแปรให้อ่านออกเสียงได้ (Pronounceable Names)?",
+          "code": "// Bad\nclass DtaRcrd102 {\n  private Date genymdhms;\n};\n\n// Good\nclass Customer {\n  private Date generationTimestamp;\n};",
+          "options": [
+            "เพื่อให้คอมพิวเตอร์ประมวลผลเร็วขึ้น",
+            "เพื่อให้ง่ายต่อการพูดคุยสื่อสารในทีม",
+            "เพื่อให้ประหยัดพื้นที่หน่วยความจำ",
+            "เพื่อให้ดูเป็นมืออาชีพ"
+          ],
+          "answer": "เพื่อให้ง่ายต่อการพูดคุยสื่อสารในทีม"
+        },
+        {
+          "question": "การใช้ตัวแปรชื่อสั้นๆ ตัวเดียว (เช่น i, j, k) ควรใช้ในกรณีใดเท่านั้น?",
+          "options": [
+            "ตัวแปร Global",
+            "ตัวแปรใน Loop ขนาดเล็ก",
+            "ชื่อ Class",
+            "ชื่อ Function"
+          ],
+          "answer": "ตัวแปรใน Loop ขนาดเล็ก"
+        },
+        {
+          "question": "ความแตกต่างหลักระหว่าง Objects และ Data Structures คืออะไร?",
+          "options": [
+            "Objects เปิดเผยข้อมูล, Data Structures ซ่อนข้อมูล",
+            "Objects ซ่อนข้อมูลและเปิดเผยพฤติกรรม, Data Structures เปิดเผยข้อมูล",
+            "ไม่มีความแตกต่างกัน",
+            "Objects ใช้ใน Java, Data Structures ใช้ใน C"
+          ],
+          "answer": "Objects ซ่อนข้อมูลและเปิดเผยพฤติกรรม, Data Structures เปิดเผยข้อมูล"
+        },
+        {
+          "question": "ในการจัดการ Error (Error Handling) ลุง Bob แนะนำให้ใช้วิธีใดแทนการ Return Error Codes?",
+          "code": "// Bad\nif (deletePage(page) == E_OK) {\n  if (registry.deleteReference(page.name) == E_OK) {\n    // ...\n  }\n}\n\n// Good\ntry {\n  deletePage(page);\n  registry.deleteReference(page.name);\n} catch (Exception e) {\n  logError(e);\n}",
+          "options": [
+            "ใช้ Global Variable",
+            "ใช้ Exceptions",
+            "ใช้ Flag",
+            "ใช้ Print Statement"
+          ],
+          "answer": "ใช้ Exceptions"
+        },
+        {
+          "question": "ทำไมเราควรเขียน Try-Catch-Finally เป็นอันดับแรกๆ เมื่อเขียนโค้ดที่อาจเกิด Error?",
+          "options": [
+            "เพื่อให้ Code ดูสวยงาม",
+            "เพื่อให้มองเป็น Transaction และจัดการ State ได้สอดคล้องกัน",
+            "เป็นข้อบังคับของภาษา",
+            "เพื่อให้โปรแกรมทำงานเร็วขึ้น"
+          ],
+          "answer": "เพื่อให้มองเป็น Transaction และจัดการ State ได้สอดคล้องกัน"
+        },
+        {
+          "question": "การ Return Null จากฟังก์ชันเป็นสิ่งที่ควรหลีกเลี่ยงเพราะเหตุใด?",
+          "code": "public void registerItem(Item item) {\n  if (item != null) {\n    ItemRegistry registry = peristentStore.getItemRegistry();\n    if (registry != null) {\n      // ...Lots of null checks\n    }\n  }\n}",
+          "options": [
+            "ทำให้โปรแกรมทำงานช้า",
+            "ทำให้ต้องคอยเช็ค Null ตลอดเวลา (Null Checks) และเสี่ยงต่อ NullPointerException",
+            "Null ไม่มีค่าในทางคณิตศาสตร์",
+            "ทำให้ไฟล์มีขนาดใหญ่"
+          ],
+          "answer": "ทำให้ต้องคอยเช็ค Null ตลอดเวลา (Null Checks) และเสี่ยงต่อ NullPointerException"
+        },
+        {
+          "question": "กฎข้อแรกของ TDD (Test Driven Development) คืออะไร?",
+          "options": [
+            "เขียน Test ให้ครอบคลุม 100%",
+            "ไม่เขียน Production code จนกว่าจะมี Failing unit test",
+            "เขียน Test หลังจากเขียน Code เสร็จ",
+            "Test ต้องรันเร็ว"
+          ],
+          "answer": "ไม่เขียน Production code จนกว่าจะมี Failing unit test"
+        },
+        {
+          "question": "หัวใจสำคัญของการเขียน Clean Tests คืออะไร?",
+          "options": [
+            "ความซับซ้อน (Complexity)",
+            "ความอ่านง่าย (Readability)",
+            "ความยาว (Length)",
+            "การใช้ Framework"
+          ],
+          "answer": "ความอ่านง่าย (Readability)"
+        },
+        {
+          "question": "ในหลักการ F.I.R.S.T ของ Unit Test ตัว 'F' ย่อมาจากอะไร?",
+          "options": [
+            "Functional (ทำงานได้)",
+            "Fast (ทำงานเร็ว)",
+            "Flexible (ยืดหยุ่น)",
+            "Friendly (เป็นมิตร)"
+          ],
+          "answer": "Fast (ทำงานเร็ว)"
+        },
+        {
+          "question": "ในหลักการ F.I.R.S.T ตัว 'I' (Independent) หมายความว่าอย่างไร?",
+          "options": [
+            "Test ต้องรันในเครื่องเดียวเท่านั้น",
+            "Test แต่ละตัวต้องเป็นอิสระต่อกัน ไม่ขึ้นต่อกัน",
+            "Test ต้องเขียนโดยคนคนเดียว",
+            "Test ต้องไม่ใช้ Library ภายนอก"
+          ],
+          "answer": "Test แต่ละตัวต้องเป็นอิสระต่อกัน ไม่ขึ้นต่อกัน"
+        },
+        {
+          "question": "หลักการ Single Responsibility Principle (SRP) สำหรับ Class หมายถึงอะไร?",
+          "code": "class UserDashboard {\n  // Bad: Handles UI, Database, and Email\n  display() { ... }\n  saveToDb() { ... }\n  sendEmail() { ... }\n}",
+          "options": [
+            "Class ควรมี Method เดียว",
+            "Class ควรมีหน้าที่รับผิดชอบเพียงเรื่องเดียว และมีเหตุผลเดียวที่จะถูกแก้ไข",
+            "Class ควรเขียนโดยคนคนเดียว",
+            "Class ควรไม่มี Bug เลย"
+          ],
+          "answer": "Class ควรมีหน้าที่รับผิดชอบเพียงเรื่องเดียว และมีเหตุผลเดียวที่จะถูกแก้ไข"
+        },
+        {
+          "question": "การออกแบบ Class ที่ดีควรมีลักษณะอย่างไรในเรื่องของขนาด?",
+          "options": [
+            "ขนาดใหญ่ที่สุดเท่าที่จะทำได้",
+            "ขนาดเล็ก (Small)",
+            "ขนาดปานกลาง",
+            "ไม่มีข้อกำหนดเรื่องขนาด"
+          ],
+          "answer": "ขนาดเล็ก (Small)"
+        },
+        {
+          "question": "Encapsulation ในการออกแบบ Class ช่วยในเรื่องใด?",
+          "code": "class BankAccount {\n  private double balance;\n  \n  public void deposit(double amount) {\n    if (amount > 0) balance += amount;\n  }\n}",
+          "options": [
+            "ทำให้ Class ทำงานเร็วขึ้น",
+            "ซ่อนรายละเอียดการทำงานภายใน (Information Hiding) ป้องกันการแก้ไขข้อมูลโดยตรง",
+            "ทำให้ Class สืบทอดไม่ได้",
+            "ทำให้ไม่ต้องเขียน Test"
+          ],
+          "answer": "ซ่อนรายละเอียดการทำงานภายใน (Information Hiding) ป้องกันการแก้ไขข้อมูลโดยตรง"
+        }
+      ]
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "description": "พื้นฐาน Dockerfile และการจัดการ Container",
+      "icon": "🐳",
+      "color": "hsl(210, 85%, 55%)",
+      "questions": [
+        {
+          "question": "Dockerfile คืออะไร?",
+          "options": [
+            "ไฟล์สำหรับเก็บข้อมูล Database",
+            "ไฟล์คู่มือ (Blueprint) สำหรับสร้าง Docker Image",
+            "โปรแกรมสำหรับรัน Container",
+            "ระบบปฏิบัติการ Linux ขนาดเล็ก"
+          ],
+          "answer": "ไฟล์คู่มือ (Blueprint) สำหรับสร้าง Docker Image"
+        },
+        {
+          "question": "คำสั่งใดใน Dockerfile ที่ต้องมีเป็นบรรทัดแรกเสมอ?",
+          "code": "FROM node:20-alpine",
+          "options": [
+            "RUN",
+            "CMD",
+            "FROM",
+            "WORKDIR"
+          ],
+          "answer": "FROM"
+        },
+        {
+          "question": "คำสั่ง WORKDIR มีหน้าที่อะไร?",
+          "code": "WORKDIR /app\nCOPY . .",
+          "options": [
+            "สร้าง User ใหม่",
+            "กำหนดโฟลเดอร์หลักที่จะทำงานภายใน Container",
+            "ติดตั้งโปรแกรม",
+            "เปิด Port"
+          ],
+          "answer": "กำหนดโฟลเดอร์หลักที่จะทำงานภายใน Container"
+        },
+        {
+          "question": "ข้อใดคือข้อดีของการใช้ WORKDIR แทนการใช้ RUN cd ... ?",
+          "options": [
+            "ทำให้ Image มีขนาดเล็กลง",
+            "ทำให้ Dockerfile อ่านง่ายและชัดเจนกว่า",
+            "ทำให้ Build เร็วขึ้น",
+            "ไม่มีข้อแตกต่าง"
+          ],
+          "answer": "ทำให้ Dockerfile อ่านง่ายและชัดเจนกว่า"
+        },
+        {
+          "question": "คำสั่ง RUN ใช้ทำอะไร?",
+          "code": "RUN apk update && apk add curl\nRUN npm install",
+          "options": [
+            "รันคำสั่งเมื่อ Container เริ่มทำงาน",
+            "รันคำสั่งในขณะ Build Image เพื่อติดตั้งโปรแกรมหรือ Dependencies",
+            "รันคำสั่งในเครื่อง Host",
+            "หยุดการทำงานของ Container"
+          ],
+          "answer": "รันคำสั่งในขณะ Build Image เพื่อติดตั้งโปรแกรมหรือ Dependencies"
+        },
+        {
+          "question": "ความแตกต่างระหว่าง COPY และ ADD คืออะไร?",
+          "options": [
+            "COPY สามารถแตกไฟล์ tar ได้อัตโนมัติ",
+            "ADD สามารถแตกไฟล์ tar และดาวน์โหลดไฟล์จาก URL ได้",
+            "COPY ใช้สำหรับไฟล์ขนาดใหญ่เท่านั้น",
+            "ADD ใช้สำหรับไฟล์ Text เท่านั้น"
+          ],
+          "answer": "ADD สามารถแตกไฟล์ tar และดาวน์โหลดไฟล์จาก URL ได้"
+        },
+        {
+          "question": "ตาม Best Practices ควรเลือกใช้คำสั่งใดในการนำไฟล์เข้า Image?",
+          "code": "# Which one is better?\nCOPY package.json ./\n# OR\nADD package.json ./",
+          "options": [
+            "ADD เสมอ",
+            "COPY เป็นหลัก ยกเว้นจำเป็นต้องใช้ฟีเจอร์พิเศษของ ADD",
+            "ใช้อะไรก็ได้",
+            "ใช้ RUN cp แทน"
+          ],
+          "answer": "COPY เป็นหลัก ยกเว้นจำเป็นต้องใช้ฟีเจอร์พิเศษของ ADD"
+        },
+        {
+          "question": "คำสั่ง EXPOSE 3000 มีผลอย่างไร?",
+          "code": "EXPOSE 3000",
+          "options": [
+            "เปิด Port 3000 ให้ภายนอกเข้าถึงได้ทันที",
+            "เป็นเพียงการระบุ (Document) ว่า Container จะใช้ Port 3000",
+            "Block Port 3000",
+            "Forward Port 3000 ไปยัง 80"
+          ],
+          "answer": "เป็นเพียงการระบุ (Document) ว่า Container จะใช้ Port 3000"
+        },
+        {
+          "question": "หากต้องการเปิด Port จริงๆ ต้องใช้คำสั่งใดตอน Run?",
+          "options": [
+            "docker run -p 8080:3000",
+            "docker build -p 8080:3000",
+            "docker expose 3000",
+            "docker open 3000"
+          ],
+          "answer": "docker run -p 8080:3000"
+        },
+        {
+          "question": "ความแตกต่างหลักระหว่าง CMD และ ENTRYPOINT คืออะไร?",
+          "options": [
+            "CMD ไม่สามารถถูก Override ได้",
+            "ENTRYPOINT ไม่สามารถถูก Override ได้ง่ายๆ และมักใช้กำหนดคำสั่งหลัก",
+            "CMD ใช้สำหรับติดตั้งโปรแกรม",
+            "ENTRYPOINT ใช้สำหรับกำหนด Environment Variable"
+          ],
+          "answer": "ENTRYPOINT ไม่สามารถถูก Override ได้ง่ายๆ และมักใช้กำหนดคำสั่งหลัก"
+        },
+        {
+          "question": "หากใช้ ENTRYPOINT คู่กับ CMD จะเกิดผลอย่างไร?",
+          "code": "ENTRYPOINT [\"/bin/ping\"]\nCMD [\"localhost\"]",
+          "options": [
+            "เกิด Error",
+            "CMD จะถูกเพิกเฉย",
+            "CMD จะกลายเป็น Default Parameter ของ ENTRYPOINT",
+            "ENTRYPOINT จะกลายเป็น Default Parameter ของ CMD"
+          ],
+          "answer": "CMD จะกลายเป็น Default Parameter ของ ENTRYPOINT"
+        },
+        {
+          "question": "จากโค้ดตัวอย่าง หากรัน 'docker run my-image google.com' จะเกิดอะไรขึ้น?",
+          "code": "ENTRYPOINT [\"/bin/ping\"]\nCMD [\"localhost\"]",
+          "options": [
+            "ping localhost",
+            "ping google.com",
+            "Error",
+            "รันทั้ง ping localhost และ ping google.com"
+          ],
+          "answer": "ping google.com"
+        },
+        {
+          "question": "Multi-stage build มีประโยชน์อย่างไร?",
+          "code": "FROM node:20-alpine AS builder\nRUN npm run build\n\nFROM node:20-alpine\nCOPY --from=builder /app/dist ./dist",
+          "options": [
+            "ทำให้ Build เร็วขึ้นมาก",
+            "ทำให้ Image สุดท้ายมีขนาดเล็ก เพราะไม่รวม Build Tools",
+            "ทำให้รันได้หลาย Container พร้อมกัน",
+            "ทำให้เขียน Dockerfile ง่ายขึ้น"
+          ],
+          "answer": "ทำให้ Image สุดท้ายมีขนาดเล็ก เพราะไม่รวม Build Tools"
+        },
+        {
+          "question": "ใน Dockerfile คำสั่งใดจะถูกรันเป็นคำสั่งสุดท้ายเมื่อ Container เริ่มทำงาน?",
+          "options": [
+            "RUN",
+            "BUILD",
+            "CMD หรือ ENTRYPOINT",
+            "FINISH"
+          ],
+          "answer": "CMD หรือ ENTRYPOINT"
+        },
+        {
+          "question": "คำสั่งใดใช้สำหรับสร้าง Image จาก Dockerfile?",
+          "options": [
+            "docker create",
+            "docker run",
+            "docker build",
+            "docker image"
+          ],
+          "answer": "docker build"
+        }
+      ]
+    },
+    {
+      "id": "aws",
+      "name": "AWS Cloud",
+      "description": "บริการพื้นฐานของ Amazon Web Services",
+      "icon": "☁️",
+      "color": "hsl(30, 90%, 50%)",
+      "questions": [
+        {
+          "question": "บริการใดของ AWS ที่เปรียบเสมือนการ 'เช่าเซิร์ฟเวอร์' เสมือน (Virtual Server)?",
+          "options": [
+            "S3",
+            "EC2 (Elastic Compute Cloud)",
+            "RDS",
+            "Lambda"
+          ],
+          "answer": "EC2 (Elastic Compute Cloud)"
+        },
+        {
+          "question": "หากต้องการรันโค้ดโดยไม่ต้องจัดการ Server (Serverless) ควรใช้บริการใด?",
+          "code": "exports.handler = async (event) => {\n  const response = {\n    statusCode: 200,\n    body: JSON.stringify('Hello from Lambda!'),\n  };\n  return response;\n};",
+          "options": [
+            "EC2",
+            "ECS",
+            "Lambda",
+            "EBS"
+          ],
+          "answer": "Lambda"
+        },
+        {
+          "question": "บริการใดใช้สำหรับเก็บไฟล์ (Object Storage) ที่มีความทนทานสูงและราคาถูก?",
+          "options": [
+            "EBS",
+            "EFS",
+            "S3 (Simple Storage Service)",
+            "RDS"
+          ],
+          "answer": "S3 (Simple Storage Service)"
+        },
+        {
+          "question": "EBS (Elastic Block Store) คืออะไร?",
+          "options": [
+            "ฐานข้อมูล NoSQL",
+            "พื้นที่เก็บไฟล์แบบแชร์",
+            "ดิสก์ (Volume) ที่ผูกติดกับ EC2",
+            "บริการจัดการโดเมน"
+          ],
+          "answer": "ดิสก์ (Volume) ที่ผูกติดกับ EC2"
+        },
+        {
+          "question": "หากต้องการแชร์ไฟล์ระหว่าง EC2 หลายเครื่องพร้อมกัน ควรใช้บริการ Storage ใด?",
+          "options": [
+            "EBS",
+            "EFS (Elastic File System)",
+            "S3 Glacier",
+            "Instance Store"
+          ],
+          "answer": "EFS (Elastic File System)"
+        },
+        {
+          "question": "RDS (Relational Database Service) รองรับฐานข้อมูลประเภทใดบ้าง?",
+          "options": [
+            "MongoDB, Cassandra",
+            "MySQL, PostgreSQL, SQL Server, MariaDB",
+            "Redis, Memcached",
+            "DynamoDB"
+          ],
+          "answer": "MySQL, PostgreSQL, SQL Server, MariaDB"
+        },
+        {
+          "question": "DynamoDB คือบริการฐานข้อมูลประเภทใด?",
+          "code": "const params = {\n  TableName: 'Users',\n  Item: {\n    'UserId': {S: '001'},\n    'Name': {S: 'John Doe'}\n  }\n};",
+          "options": [
+            "Relational Database (SQL)",
+            "NoSQL Key-Value Database",
+            "Graph Database",
+            "In-memory Database"
+          ],
+          "answer": "NoSQL Key-Value Database"
+        },
+        {
+          "question": "VPC (Virtual Private Cloud) คืออะไร?",
+          "options": [
+            "บริการ VPN",
+            "พื้นที่เครือข่ายส่วนตัวจำลองบน AWS",
+            "บริการป้องกัน DDoS",
+            "บริการเชื่อมต่ออินเทอร์เน็ต"
+          ],
+          "answer": "พื้นที่เครือข่ายส่วนตัวจำลองบน AWS"
+        },
+        {
+          "question": "บริการใดใช้สำหรับจัดการ DNS และ Domain Name?",
+          "options": [
+            "CloudFront",
+            "Route 53",
+            "Direct Connect",
+            "API Gateway"
+          ],
+          "answer": "Route 53"
+        },
+        {
+          "question": "IAM (Identity and Access Management) มีหน้าที่หลักคืออะไร?",
+          "code": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:ListBucket\",\n      \"Resource\": \"arn:aws:s3:::example_bucket\"\n    }\n  ]\n}",
+          "options": [
+            "จัดการฐานข้อมูลผู้ใช้",
+            "จัดการสิทธิ์การเข้าถึง (Authentication & Authorization) ทรัพยากรใน AWS",
+            "ตรวจสอบความปลอดภัยของ Network",
+            "เข้ารหัสข้อมูล"
+          ],
+          "answer": "จัดการสิทธิ์การเข้าถึง (Authentication & Authorization) ทรัพยากรใน AWS"
+        },
+        {
+          "question": "CloudWatch ใช้สำหรับทำอะไร?",
+          "options": [
+            "ดู Log, Metric และตั้ง Alert ของระบบ",
+            "ตรวจสอบประวัติการใช้งาน API (Audit Trail)",
+            "สำรองข้อมูลอัตโนมัติ",
+            "จัดการ Container"
+          ],
+          "answer": "ดู Log, Metric และตั้ง Alert ของระบบ"
+        },
+        {
+          "question": "หากต้องการตรวจสอบว่า 'ใคร' ทำอะไรกับ Resource ใน AWS Account (Audit Trail) ควรใช้บริการใด?",
+          "options": [
+            "CloudWatch",
+            "CloudTrail",
+            "Config",
+            "Inspector"
+          ],
+          "answer": "CloudTrail"
+        },
+        {
+          "question": "ECS และ EKS เกี่ยวข้องกับเทคโนโลยีใด?",
+          "options": [
+            "Virtual Machine",
+            "Container (Docker / Kubernetes)",
+            "Serverless Function",
+            "Database"
+          ],
+          "answer": "Container (Docker / Kubernetes)"
+        },
+        {
+          "question": "Aurora คืออะไร?",
+          "options": [
+            "บริการ AI ของ AWS",
+            "Database Engine ของ AWS ที่เข้ากันได้กับ MySQL/PostgreSQL แต่เร็วกว่า",
+            "เครื่องมือ Deploy Code",
+            "บริการจัดการ Key"
+          ],
+          "answer": "Database Engine ของ AWS ที่เข้ากันได้กับ MySQL/PostgreSQL แต่เร็วกว่า"
+        },
+        {
+          "question": "API Gateway มักใช้คู่กับบริการใดเพื่อสร้าง Serverless API?",
+          "options": [
+            "EC2",
+            "Lambda",
+            "RDS",
+            "S3"
+          ],
+          "answer": "Lambda"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Software Security",
+      "description": "ความปลอดภัยของซอฟต์แวร์และช่องโหว่ทั่วไป (OWASP Top 10)",
+      "icon": "🔐",
+      "color": "hsl(0, 85%, 50%)",
+      "questions": [
+        {
+          "question": "SQL Injection คืออะไร?",
+          "code": "SELECT * FROM users WHERE username = '$username' AND password = '$password'",
+          "options": [
+            "การโจมตีที่ผู้ใช้ส่งคำสั่ง SQL แทรกเข้าไปใน Input เพื่อหลอกให้ Database ทำงานผิดพลาด",
+            "การโจมตีที่ผู้ใช้ขโมย Session ID",
+            "การโจมตีที่ทำให้ Server ล่มด้วยการส่ง Request จำนวนมาก",
+            "การโจมตีที่ดักจับข้อมูลระหว่างทาง"
+          ],
+          "answer": "การโจมตีที่ผู้ใช้ส่งคำสั่ง SQL แทรกเข้าไปใน Input เพื่อหลอกให้ Database ทำงานผิดพลาด"
+        },
+        {
+          "question": "วิธีป้องกัน SQL Injection ที่ดีที่สุดคืออะไร?",
+          "code": "// Prepared Statement Example\nconst query = 'SELECT * FROM users WHERE id = ?';\ndb.execute(query, [userId]);",
+          "options": [
+            "ใช้ Prepared Statements (Parameterized Queries)",
+            "ตรวจสอบความยาวของ Input",
+            "ใช้ Firewall",
+            "เปลี่ยนชื่อตารางใน Database"
+          ],
+          "answer": "ใช้ Prepared Statements (Parameterized Queries)"
+        },
+        {
+          "question": "Cross-Site Scripting (XSS) คือการโจมตีรูปแบบใด?",
+          "code": "<script>alert('Hacked!');</script>",
+          "options": [
+            "การฝังสคริปต์อันตรายลงในหน้าเว็บเพื่อให้รันบน Browser ของเหยื่อ",
+            "การเดารหัสผ่าน",
+            "การเข้าถึงไฟล์ระบบบน Server",
+            "การปลอมแปลงหน้า Login"
+          ],
+          "answer": "การฝังสคริปต์อันตรายลงในหน้าเว็บเพื่อให้รันบน Browser ของเหยื่อ"
+        },
+        {
+          "question": "Broken Authentication มักเกิดจากสาเหตุใด?",
+          "options": [
+            "การใช้รหัสผ่านที่คาดเดาง่าย หรือการจัดการ Session ไม่ดี",
+            "การเปิด Port ทิ้งไว้",
+            "การไม่อัปเดต Software",
+            "การใช้ Database ผิดประเภท"
+          ],
+          "answer": "การใช้รหัสผ่านที่คาดเดาง่าย หรือการจัดการ Session ไม่ดี"
+        },
+        {
+          "question": "IDOR (Insecure Direct Object References) คืออะไร?",
+          "code": "GET /api/users/12345/orders\n// Attacker changes ID to 12346\nGET /api/users/12346/orders",
+          "options": [
+            "การที่ผู้ใช้สามารถเข้าถึงข้อมูลของคนอื่นได้โดยการเปลี่ยน ID ใน URL หรือ Parameter",
+            "การที่ผู้ใช้ลืมรหัสผ่าน",
+            "การที่ระบบล่มบ่อย",
+            "การที่ Database ทำงานช้า"
+          ],
+          "answer": "การที่ผู้ใช้สามารถเข้าถึงข้อมูลของคนอื่นได้โดยการเปลี่ยน ID ใน URL หรือ Parameter"
+        },
+        {
+          "question": "Security Misconfiguration หมายถึงอะไร?",
+          "options": [
+            "การตั้งค่าความปลอดภัยของระบบไม่ถูกต้อง เช่น เปิด Debug Mode ทิ้งไว้ หรือใช้ Default Password",
+            "การเขียนโค้ดผิด Syntax",
+            "การออกแบบ UX ไม่ดี",
+            "การใช้ Server ราคาถูก"
+          ],
+          "answer": "การตั้งค่าความปลอดภัยของระบบไม่ถูกต้อง เช่น เปิด Debug Mode ทิ้งไว้ หรือใช้ Default Password"
+        },
+        {
+          "question": "Sensitive Data Exposure คือความเสี่ยงเกี่ยวกับอะไร?",
+          "options": [
+            "การเปิดเผยข้อมูลสำคัญ (เช่น รหัสผ่าน, เลขบัตรเครดิต) โดยไม่ได้เข้ารหัส",
+            "การเปิดเผย Source Code",
+            "การเปิดเผยชื่อพนักงาน",
+            "การเปิดเผยที่อยู่บริษัท"
+          ],
+          "answer": "การเปิดเผยข้อมูลสำคัญ (เช่น รหัสผ่าน, เลขบัตรเครดิต) โดยไม่ได้เข้ารหัส"
+        },
+        {
+          "question": "CSRF (Cross-Site Request Forgery) คือการโจมตีแบบใด?",
+          "options": [
+            "หลอกให้เหยื่อทำธุรกรรมหรือ Action บางอย่างโดยไม่รู้ตัว ผ่าน Session ที่ยังค้างอยู่",
+            "ขโมยรหัสผ่านจาก Database",
+            "ดักจับข้อมูลผ่าน Wi-Fi",
+            "ส่งไวรัสเข้าเครื่องเหยื่อ"
+          ],
+          "answer": "หลอกให้เหยื่อทำธุรกรรมหรือ Action บางอย่างโดยไม่รู้ตัว ผ่าน Session ที่ยังค้างอยู่"
+        },
+        {
+          "question": "การใช้ Components with Known Vulnerabilities มีความเสี่ยงอย่างไร?",
+          "options": [
+            "ทำให้ระบบทำงานช้าลง",
+            "ทำให้ผู้โจมตีสามารถใช้ช่องโหว่ที่เปิดเผยแล้วในการโจมตีระบบได้ง่าย",
+            "ทำให้ค่าใช้จ่ายสูงขึ้น",
+            "ทำให้ Code อ่านยาก"
+          ],
+          "answer": "ทำให้ผู้โจมตีสามารถใช้ช่องโหว่ที่เปิดเผยแล้วในการโจมตีระบบได้ง่าย"
+        },
+        {
+          "question": "Insecure Deserialization คืออะไร?",
+          "options": [
+            "การแปลงข้อมูล Object จาก Input ที่ไม่น่าเชื่อถือ ทำให้เกิดการรันโค้ดอันตราย",
+            "การเข้ารหัสข้อมูลผิดวิธี",
+            "การส่งข้อมูลผ่าน HTTP",
+            "การใช้ JSON ผิดรูปแบบ"
+          ],
+          "answer": "การแปลงข้อมูล Object จาก Input ที่ไม่น่าเชื่อถือ ทำให้เกิดการรันโค้ดอันตราย"
+        },
+        {
+          "question": "Insufficient Logging & Monitoring ส่งผลเสียอย่างไร?",
+          "options": [
+            "ทำให้ไม่รู้ตัวเมื่อถูกโจมตี และไม่สามารถตรวจสอบย้อนหลังได้",
+            "ทำให้ Hard Disk เต็มเร็ว",
+            "ทำให้ Server ร้อน",
+            "ทำให้ Network ช้า"
+          ],
+          "answer": "ทำให้ไม่รู้ตัวเมื่อถูกโจมตี และไม่สามารถตรวจสอบย้อนหลังได้"
+        },
+        {
+          "question": "HTTPS ช่วยป้องกันความเสี่ยงด้านใดเป็นหลัก?",
+          "options": [
+            "SQL Injection",
+            "Man-in-the-Middle Attack (การดักฟังข้อมูลระหว่างทาง)",
+            "DDoS",
+            "Brute Force Attack"
+          ],
+          "answer": "Man-in-the-Middle Attack (การดักฟังข้อมูลระหว่างทาง)"
+        },
+        {
+          "question": "หลักการ Least Privilege คืออะไร?",
+          "options": [
+            "ให้สิทธิ์ผู้ใช้เท่าที่จำเป็นต่อการทำงานเท่านั้น",
+            "ให้สิทธิ์ผู้ใช้ทุกคนเท่ากัน",
+            "ให้สิทธิ์ Admin แก่ทุกคน",
+            "ไม่ให้สิทธิ์ใครเลย"
+          ],
+          "answer": "ให้สิทธิ์ผู้ใช้เท่าที่จำเป็นต่อการทำงานเท่านั้น"
+        },
+        {
+          "question": "การทำ Input Validation สำคัญอย่างไร?",
+          "options": [
+            "ช่วยป้องกัน Injection Attacks และข้อมูลที่ไม่ถูกต้อง",
+            "ช่วยให้ UI สวยงาม",
+            "ช่วยให้ Database ทำงานเร็วขึ้น",
+            "ช่วยประหยัดพื้นที่จัดเก็บ"
+          ],
+          "answer": "ช่วยป้องกัน Injection Attacks และข้อมูลที่ไม่ถูกต้อง"
+        },
+        {
+          "question": "Multi-Factor Authentication (MFA) ช่วยเพิ่มความปลอดภัยได้อย่างไร?",
+          "options": [
+            "ต้องใช้มากกว่า 1 ปัจจัยในการยืนยันตัวตน (เช่น รหัสผ่าน + OTP)",
+            "ต้องใช้รหัสผ่านที่ยาวขึ้น",
+            "ต้องเปลี่ยนรหัสผ่านทุกวัน",
+            "ต้องใช้อุปกรณ์ราคาแพง"
+          ],
+          "answer": "ต้องใช้มากกว่า 1 ปัจจัยในการยืนยันตัวตน (เช่น รหัสผ่าน + OTP)"
+        }
+      ]
+    },
+    {
+      "id": "sdlc",
+      "name": "Software Development Lifecycle",
+      "description": "กระบวนการพัฒนาซอฟต์แวร์ (SDLC) และโมเดลต่างๆ",
+      "icon": "🔄",
+      "color": "hsl(120, 85%, 40%)",
+      "questions": [
+        {
+          "question": "SDLC ย่อมาจากอะไร?",
+          "options": [
+            "Software Design Language Control",
+            "Software Development Life Cycle",
+            "System Design Life Cycle",
+            "Software Deployment Life Cycle"
+          ],
+          "answer": "Software Development Life Cycle"
+        },
+        {
+          "question": "ขั้นตอนแรกของ SDLC คืออะไร?",
+          "options": [
+            "Testing",
+            "Maintenance",
+            "Requirement Analysis",
+            "Deployment"
+          ],
+          "answer": "Requirement Analysis"
+        },
+        {
+          "question": "ข้อดีของ Waterfall Model คือ?",
+          "options": [
+            "Flexible ต่อการเปลี่ยนแปลง",
+            "เหมาะกับโครงการขนาดใหญ่ที่ต้องวางแผนล่วงหน้า",
+            "ลดเวลาในการ deploy",
+            "ทุก phase ทำพร้อมกัน"
+          ],
+          "answer": "เหมาะกับโครงการขนาดใหญ่ที่ต้องวางแผนล่วงหน้า"
+        },
+        {
+          "question": "Agile Model เน้นอะไร?",
+          "options": [
+            "การวางแผนล่วงหน้าอย่างเคร่งครัด",
+            "Iterative และ collaboration",
+            "ไม่มี documentation",
+            "ใช้ waterfall phase"
+          ],
+          "answer": "Iterative และ collaboration"
+        },
+        {
+          "question": "Prototyping Model ใช้ทำอะไร?",
+          "options": [
+            "สร้างต้นแบบเพื่อรับ feedback ก่อน development",
+            "ทำ deployment",
+            "ทำ testing แบบ batch",
+            "ใช้สำหรับ documentation"
+          ],
+          "answer": "สร้างต้นแบบเพื่อรับ feedback ก่อน development"
+        },
+        {
+          "question": "Iterative Model ดีอย่างไร?",
+          "options": [
+            "ทุก phase ต้องเสร็จครั้งเดียว",
+            "สามารถปรับปรุงซอฟต์แวร์ในแต่ละ iteration",
+            "ลด collaboration",
+            "ไม่มี testing"
+          ],
+          "answer": "สามารถปรับปรุงซอฟต์แวร์ในแต่ละ iteration"
+        },
+        {
+          "question": "ขั้นตอน Design ใน SDLC ทำอะไร?",
+          "options": [
+            "เขียน code",
+            "วางโครงสร้าง ระบบและ interface",
+            "Testing",
+            "Deployment"
+          ],
+          "answer": "วางโครงสร้าง ระบบและ interface"
+        },
+        {
+          "question": "Unit Testing คืออะไร?",
+          "options": [
+            "ทดสอบระบบทั้งหมด",
+            "ทดสอบ component หรือ module แต่ละตัว",
+            "ทดสอบ user requirement",
+            "Deployment"
+          ],
+          "answer": "ทดสอบ component หรือ module แต่ละตัว"
+        },
+        {
+          "question": "Integration Testing คือ?",
+          "options": [
+            "ทดสอบ interaction ระหว่าง modules",
+            "ทดสอบ performance",
+            "ทำ deployment",
+            "เขียน requirement"
+          ],
+          "answer": "ทดสอบ interaction ระหว่าง modules"
+        },
+        {
+          "question": "System Testing คือ?",
+          "options": [
+            "Testing component แยกกัน",
+            "ทดสอบระบบทั้งหมดรวมกัน",
+            "ทำ documentation",
+            "Maintenance"
+          ],
+          "answer": "ทดสอบระบบทั้งหมดรวมกัน"
+        },
+        {
+          "question": "Acceptance Testing คือ?",
+          "options": [
+            "ทดสอบ internal team",
+            "ทดสอบโดยผู้ใช้หรือ client",
+            "ทำ integration",
+            "Design"
+          ],
+          "answer": "ทดสอบโดยผู้ใช้หรือ client"
+        },
+        {
+          "question": "Maintenance Phase ทำอะไร?",
+          "options": [
+            "พัฒนา code ใหม่",
+            "แก้ defect, update system และปรับปรุง performance",
+            "ทำ prototype",
+            "Requirement gathering"
+          ],
+          "answer": "แก้ defect, update system และปรับปรุง performance"
+        },
+        {
+          "question": "DevOps มีบทบาทสำคัญใน SDLC อย่างไร?",
+          "options": [
+            "รวม development และ operations เพื่อลด cycle time",
+            "ทำ requirement analysis",
+            "ทำ prototyping",
+            "ใช้ waterfall"
+          ],
+          "answer": "รวม development และ operations เพื่อลด cycle time"
+        },
+        {
+          "question": "Continuous Integration (CI) คือ?",
+          "options": [
+            "การรวม requirement",
+            "การ merge code บ่อยครั้งและทดสอบอัตโนมัติ",
+            "Deployment แบบ manual",
+            "Testing system"
+          ],
+          "answer": "การ merge code บ่อยครั้งและทดสอบอัตโนมัติ"
+        }
+      ]
+    },
+    {
+      "id": "all",
+      "name": "แบบทดสอบรวม",
+      "description": "ข้อสอบทั้งหมดจากทุกหมวดหมู่",
+      "icon": "🎓",
+      "color": "hsl(250, 85%, 60%)",
+      "questions": []
+    }
+  ]
+}

@@ -16,6 +16,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Animated Background -->
@@ -49,14 +51,7 @@
           <p class="welcome-subtitle">ทดสอบความรู้ด้านการพัฒนาซอฟต์แวร์</p>
 
           <div class="topics-preview">
-            <div class="topic-tag">Git</div>
-            <div class="topic-tag">DDD</div>
-            <div class="topic-tag">OOAD</div>
-            <div class="topic-tag">OOP</div>
-            <div class="topic-tag">SOLID</div>
-            <div class="topic-tag">CI/CD</div>
-            <div class="topic-tag">Architecture</div>
-            <div class="topic-tag">Microservices</div>
+            <!-- Topics will be populated dynamically from example.json -->
           </div>
 
           <div class="stats-preview">
@@ -89,6 +84,37 @@
         </div>
       </div>
 
+      <!-- Category Selection Screen -->
+      <div id="category-screen" class="screen">
+        <div class="category-container">
+          <div class="category-header">
+            <h1 class="category-title">เลือกหมวดหมู่ข้อสอบ</h1>
+            <p class="category-subtitle">เลือกหัวข้อที่คุณต้องการทดสอบความรู้</p>
+          </div>
+          
+          <div id="categories-grid" class="categories-grid">
+            <!-- Categories will be inserted here dynamically -->
+          </div>
+
+          <button id="back-to-welcome-btn" class="btn btn-secondary back-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <span>กลับ</span>
+          </button>
+        </div>
+      </div>
+
       <!-- Quiz Screen -->
       <div id="quiz-screen" class="screen">
         <!-- Progress Bar -->
@@ -113,6 +139,21 @@
             </div>
           </div>
           <h2 class="question-text" id="question-text">กำลังโหลดคำถาม...</h2>
+
+          <!-- Code Snippet Container -->
+          <div id="code-container" class="code-window" style="display: none;">
+            <div class="code-header">
+              <div class="code-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="code-title">Example Code</div>
+            </div>
+            <div class="code-content">
+              <pre><code id="code-block" class="language-javascript"></code></pre>
+            </div>
+          </div>
 
           <div class="options-container" id="options-container">
             <!-- Options will be inserted here dynamically -->
@@ -293,6 +334,8 @@
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

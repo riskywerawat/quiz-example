@@ -1,22 +1,28 @@
 // ===== State Management =====
-let quizData = [];
+let quizData = {}; // Will hold the entire data structure with categories
+let categories = []; // Will hold all category objects
+let selectedCategory = null; // Currently selected category
 let currentQuestionIndex = 0;
 let userAnswers = [];
 let shuffledQuestions = [];
 
 // ===== DOM Elements =====
 const welcomeScreen = document.getElementById("welcome-screen");
+const categoryScreen = document.getElementById("category-screen");
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 const reviewScreen = document.getElementById("review-screen");
 
 const startBtn = document.getElementById("start-btn");
+const backToWelcomeBtn = document.getElementById("back-to-welcome-btn");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
 const submitBtn = document.getElementById("submit-btn");
 const retryBtn = document.getElementById("retry-btn");
 const reviewBtn = document.getElementById("review-btn");
 const backToResultBtn = document.getElementById("back-to-result-btn");
+
+const categoriesGrid = document.getElementById("categories-grid");
 
 const totalQuestionsWelcome = document.getElementById("total-questions");
 const totalQuestionsQuiz = document.getElementById("total-questions-quiz");
@@ -32,13 +38,84 @@ async function init() {
   try {
     const response = await fetch("example.json");
     quizData = await response.json();
-    totalQuestionsWelcome.textContent = quizData.length;
-    console.log(`✅ Loaded ${quizData.length} questions successfully!`);
+    categories = quizData.categories;
+
+    // Calculate total questions across all categories
+    let totalQuestions = 0;
+    categories.forEach((cat) => {
+      if (cat.id !== "all") {
+        totalQuestions += cat.questions.length;
+      }
+    });
+
+    // Update "all" category with all questions
+    const allCategory = categories.find((cat) => cat.id === "all");
+    if (allCategory) {
+      allCategory.questions = [];
+      categories.forEach((cat) => {
+        if (cat.id !== "all") {
+          allCategory.questions.push(...cat.questions);
+        }
+      });
+    }
+
+    totalQuestionsWelcome.textContent = totalQuestions;
+    console.log(
+      `✅ Loaded ${categories.length} categories with ${totalQuestions} questions total!`
+    );
+
+    // Populate categories
+    populateCategories();
+
+    // Populate topic tags in welcome screen
+    populateTopicTags();
   } catch (error) {
     console.error("❌ Error loading quiz data:", error);
     questionText.textContent =
       "ไม่สามารถโหลดข้อมูลคำถามได้ กรุณาลองใหม่อีกครั้ง";
   }
+}
+
+function populateTopicTags() {
+  const topicsPreview = document.querySelector(".topics-preview");
+  if (!topicsPreview) return;
+
+  topicsPreview.innerHTML = "";
+
+  categories.forEach((cat) => {
+    if (cat.id !== "all") {
+      const tag = document.createElement("div");
+      tag.className = "topic-tag";
+      tag.textContent = cat.name;
+      topicsPreview.appendChild(tag);
+    }
+  });
+}
+
+// ===== Category Functions =====
+function populateCategories() {
+  categoriesGrid.innerHTML = "";
+
+  categories.forEach((category) => {
+    const categoryCard = document.createElement("div");
+    categoryCard.className = "category-card";
+    categoryCard.style.setProperty("--category-color", category.color);
+
+    categoryCard.innerHTML = `
+      <div class="category-icon">${category.icon}</div>
+      <h3 class="category-name">${category.name}</h3>
+      <p class="category-description">${category.description}</p>
+      <div class="category-count">${category.questions.length} คำถาม</div>
+    `;
+
+    categoryCard.addEventListener("click", () => selectCategory(category));
+    categoriesGrid.appendChild(categoryCard);
+  });
+}
+
+function selectCategory(category) {
+  selectedCategory = category;
+  startQuiz();
 }
 
 // ===== Utility Functions =====
@@ -52,7 +129,13 @@ function shuffleArray(array) {
 }
 
 function showScreen(screen) {
-  [welcomeScreen, quizScreen, resultScreen, reviewScreen].forEach((s) => {
+  [
+    welcomeScreen,
+    categoryScreen,
+    quizScreen,
+    resultScreen,
+    reviewScreen,
+  ].forEach((s) => {
     s.classList.remove("active");
   });
   screen.classList.add("active");
@@ -61,7 +144,12 @@ function showScreen(screen) {
 
 // ===== Quiz Functions =====
 function startQuiz() {
-  shuffledQuestions = shuffleArray(quizData);
+  if (!selectedCategory) {
+    console.error("No category selected!");
+    return;
+  }
+
+  shuffledQuestions = shuffleArray(selectedCategory.questions);
   currentQuestionIndex = 0;
   userAnswers = new Array(shuffledQuestions.length).fill(null);
 
@@ -85,6 +173,23 @@ function displayQuestion() {
 
   // Display question text
   questionText.textContent = question.question;
+
+  // Display code snippet if available
+  const codeContainer = document.getElementById("code-container");
+  const codeBlock = document.getElementById("code-block");
+
+  if (question.code) {
+    codeContainer.style.display = "block";
+    codeBlock.textContent = question.code;
+    // Reset class to ensure proper highlighting
+    codeBlock.className = "language-javascript";
+    // Trigger Prism highlight
+    if (window.Prism) {
+      Prism.highlightElement(codeBlock);
+    }
+  } else {
+    codeContainer.style.display = "none";
+  }
 
   // Display options
   optionsContainer.innerHTML = "";
@@ -299,8 +404,17 @@ function backToResult() {
   showScreen(resultScreen);
 }
 
+function showCategoryScreen() {
+  showScreen(categoryScreen);
+}
+
+function backToWelcome() {
+  showScreen(welcomeScreen);
+}
+
 // ===== Event Listeners =====
-startBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", showCategoryScreen);
+backToWelcomeBtn.addEventListener("click", backToWelcome);
 prevBtn.addEventListener("click", previousQuestion);
 nextBtn.addEventListener("click", nextQuestion);
 submitBtn.addEventListener("click", submitQuiz);

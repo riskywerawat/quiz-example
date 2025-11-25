@@ -175,6 +175,18 @@ function displayQuestion() {
   // Display question text
   questionText.textContent = question.question;
 
+  // Display image if available
+  const imageContainer = document.getElementById("image-container");
+  const questionImage = document.getElementById("question-image");
+
+  if (question.image) {
+    imageContainer.style.display = "block";
+    questionImage.src = question.image;
+    questionImage.alt = "Question diagram";
+  } else {
+    imageContainer.style.display = "none";
+  }
+
   // Display code snippet if available
   const codeContainer = document.getElementById("code-container");
   const codeBlock = document.getElementById("code-block");
@@ -183,7 +195,9 @@ function displayQuestion() {
     codeContainer.style.display = "block";
     codeBlock.textContent = question.code;
     // Reset class to ensure proper highlighting
-    codeBlock.className = "language-javascript";
+    // Reset class to ensure proper highlighting
+    const language = question.language || "javascript";
+    codeBlock.className = `language-${language}`;
     // Trigger Prism highlight
     if (window.Prism) {
       Prism.highlightElement(codeBlock);

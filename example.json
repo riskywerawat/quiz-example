@@ -1,122 +1,121 @@
 {
   "categories": [
- {
-  "id": "git",
-  "name": "Git",
-  "description": "คำสั่งและการใช้งาน Git เบื้องต้น",
-  "icon": "🔀",
-  "color": "hsl(15, 85%, 60%)",
-  "questions": [
     {
-      "question": "คำสั่ง git init ใช้ทำอะไร?",
-      "options": [
-        "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง",
-        "ดึงข้อมูลจาก remote repository",
-        "ลบ Git repository",
-        "ตรวจสอบสถานะไฟล์"
-      ],
-      "answer": "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง"
+      "id": "git",
+      "name": "Git",
+      "description": "คำสั่งและการใช้งาน Git เบื้องต้น",
+      "icon": "🔀",
+      "color": "hsl(15, 85%, 60%)",
+      "questions": [
+        {
+          "question": "คำสั่ง git init ใช้ทำอะไร?",
+          "options": [
+            "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง",
+            "ดึงข้อมูลจาก remote repository",
+            "ลบ Git repository",
+            "ตรวจสอบสถานะไฟล์"
+          ],
+          "answer": "เริ่มต้นการเก็บข้อมูล Git ใหม่ในเครื่อง"
+        },
+        {
+          "question": "คุณจะใช้คำสั่งใดเพื่อตรวจสอบสถานะปัจจุบันของการเก็บข้อมูล Git ของคุณ?",
+          "options": [
+            "git log",
+            "git commit",
+            "git status",
+            "git branch"
+          ],
+          "answer": "git status"
+        },
+        {
+          "question": "'branch' ใน Git หมายถึงอะไร?",
+          "options": [
+            "ไฟล์ที่ถูกลบ",
+            "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project",
+            "ข้อความ commit",
+            "ชื่อผู้ใช้งาน"
+          ],
+          "answer": "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project"
+        },
+        {
+          "question": "คุณจะสร้าง branch และเปลี่ยนไปยัง branch นั้นทันทีได้อย่างไร?",
+          "options": [
+            "git branch [branch-name]",
+            "git checkout [branch-name]",
+            "git checkout -b [branch-name]",
+            "git merge [branch-name]"
+          ],
+          "answer": "git checkout -b [branch-name]"
+        },
+        {
+          "question": "วัตถุประสงค์ของ pull request ใน Git คืออะไร?",
+          "options": [
+            "เพื่อลบ branch",
+            "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก",
+            "เพื่อเปลี่ยนชื่อ remote",
+            "เพื่อตรวจสอบประวัติ commit"
+          ],
+          "answer": "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก"
+        },
+        {
+          "question": "คำสั่งใดที่อนุญาตให้คุณเพิ่มการเปลี่ยนแปลงทั้งหมดใน work directory ของคุณไปยังพื้นที่จัดเตรียม สำหรับ commit (staging area)?",
+          "options": [
+            "git commit",
+            "git add .",
+            "git push",
+            "git pull"
+          ],
+          "answer": "git add ."
+        },
+        {
+          "question": "วัตถุประสงค์ของคำสั่ง git log คืออะไร?",
+          "options": [
+            "เพื่อสร้าง branch ใหม่",
+            "เพื่อแสดงประวัติการ commit ของ project ของคุณ",
+            "เพื่อรวม branch",
+            "เพื่อยกเลิกการเปลี่ยนแปลง"
+          ],
+          "answer": "เพื่อแสดงประวัติการ commit ของ project ของคุณ"
+        },
+        {
+          "question": "คุณจะกำหนดค่า user name ของคุณใน Git ได้อย่างไร?",
+          "options": [
+            "git config --global username \"Your Name\"",
+            "git config --global user.name \"Your Name\"",
+            "git set name \"Your Name\"",
+            "git name \"Your Name\""
+          ],
+          "answer": "git config --global user.name \"Your Name\""
+        },
+        {
+          "question": "คำสั่งใดที่ใช้ในการย้อนกลับไปยัง commit ก่อนหน้า?",
+          "options": [
+            "git revert [commit-hash]",
+            "git reset [commit-hash]",
+            "git stash",
+            "ทั้ง A และ B ถูกต้อง"
+          ],
+          "answer": "ทั้ง A และ B ถูกต้อง"
+        },
+        {
+          "question": "คุณจะส่งการ commit ในเครื่องของคุณไปยัง remote Git ได้อย่างไร?",
+          "options": [
+            "git fetch",
+            "git pull origin master",
+            "git push origin master",
+            "git merge"
+          ],
+          "answer": "git push origin master"
+        }
+      ]
     },
     {
-      "question": "คุณจะใช้คำสั่งใดเพื่อตรวจสอบสถานะปัจจุบันของการเก็บข้อมูล Git ของคุณ?",
-      "options": [
-        "git log",
-        "git commit",
-        "git status",
-        "git branch"
-      ],
-      "answer": "git status"
-    },
-    {
-      "question": "'branch' ใน Git หมายถึงอะไร?",
-      "options": [
-        "ไฟล์ที่ถูกลบ",
-        "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project",
-        "ข้อความ commit",
-        "ชื่อผู้ใช้งาน"
-      ],
-      "answer": "สภาพแวดล้อมแยกสำหรับการเปลี่ยนแปลงใน project"
-    },
-    {
-      "question": "คุณจะสร้าง branch และเปลี่ยนไปยัง branch นั้นทันทีได้อย่างไร?",
-      "options": [
-        "git branch [branch-name]",
-        "git checkout [branch-name]",
-        "git checkout -b [branch-name]",
-        "git merge [branch-name]"
-      ],
-      "answer": "git checkout -b [branch-name]"
-    },
-    {
-      "question": "วัตถุประสงค์ของ pull request ใน Git คืออะไร?",
-      "options": [
-        "เพื่อลบ branch",
-        "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก",
-        "เพื่อเปลี่ยนชื่อ remote",
-        "เพื่อตรวจสอบประวัติ commit"
-      ],
-      "answer": "เพื่อขอรีวิวการเปลี่ยนแปลง code ก่อนที่จะรวมเข้ากับ branch หลัก"
-    },
-    {
-      "question": "คำสั่งใดที่อนุญาตให้คุณเพิ่มการเปลี่ยนแปลงทั้งหมดใน work directory ของคุณไปยังพื้นที่จัดเตรียม สำหรับ commit (staging area)?",
-      "options": [
-        "git commit",
-        "git add .",
-        "git push",
-        "git pull"
-      ],
-      "answer": "git add ."
-    },
-    {
-      "question": "วัตถุประสงค์ของคำสั่ง git log คืออะไร?",
-      "options": [
-        "เพื่อสร้าง branch ใหม่",
-        "เพื่อแสดงประวัติการ commit ของ project ของคุณ",
-        "เพื่อรวม branch",
-        "เพื่อยกเลิกการเปลี่ยนแปลง"
-      ],
-      "answer": "เพื่อแสดงประวัติการ commit ของ project ของคุณ"
-    },
-    {
-      "question": "คุณจะกำหนดค่า user name ของคุณใน Git ได้อย่างไร?",
-      "options": [
-        "git config --global username \"Your Name\"",
-        "git config --global user.name \"Your Name\"",
-        "git set name \"Your Name\"",
-        "git name \"Your Name\""
-      ],
-      "answer": "git config --global user.name \"Your Name\""
-    },
-    {
-      "question": "คำสั่งใดที่ใช้ในการย้อนกลับไปยัง commit ก่อนหน้า?",
-      "options": [
-        "git revert [commit-hash]",
-        "git reset [commit-hash]",
-        "git stash",
-        "ทั้ง A และ B ถูกต้อง"
-      ],
-      "answer": "ทั้ง A และ B ถูกต้อง"
-    },
-    {
-      "question": "คุณจะส่งการ commit ในเครื่องของคุณไปยัง remote Git ได้อย่างไร?",
-      "options": [
-        "git fetch",
-        "git pull origin master",
-        "git push origin master",
-        "git merge"
-      ],
-      "answer": "git push origin master"
-    }
-  ]
-},
-     {
       "id": "git command",
       "name": "Git Command",
       "description": "คำสั่งและการใช้งาน Git เบื้องต้น",
       "icon": "🔀",
       "color": "hsl(15, 85%, 60%)",
       "questions": [
-     
         {
           "question": "สัญลักษณ์ ~ (Tilde) ใน Git ใช้ทำอะไร? (เช่น HEAD~2)",
           "code": "git show HEAD~2",
@@ -1001,7 +1000,7 @@
         },
         {
           "question": "ในการจัดการ Error (Error Handling) ลุง Bob แนะนำให้ใช้วิธีใดแทนการ Return Error Codes?",
-          "code": "// Bad\nif (deletePage(page) == E_OK) {\n  if (registry.deleteReference(page.name) == E_OK) {\n    // ...\n  }\n}\n\n// Good\ntry {\n  deletePage(page);\n  registry.deleteReference(page.name);\n} catch (Exception e) {\n  logError(e);\n}",
+          "code": "// Bad\nif (deletePage(page) == E_OK) {\n  if (registry.deleteReference(page.name) == E_OK) {\n    // ...\n  }\n}\n// Good\ntry {\n  deletePage(page);\n  registry.deleteReference(page.name);\n} catch (Exception e) {\n  logError(e);\n}",
           "options": [
             "ใช้ Global Variable",
             "ใช้ Exceptions",
@@ -1102,6 +1101,176 @@
             "ทำให้ไม่ต้องเขียน Test"
           ],
           "answer": "ซ่อนรายละเอียดการทำงานภายใน (Information Hiding) ป้องกันการแก้ไขข้อมูลโดยตรง"
+        },
+        {
+          "question": "จากโค้ดตัวอย่าง การตั้งชื่อตัวแปร 'd' ถือว่าไม่ดีเพราะเหตุใด?",
+          "code": "int d; // elapsed time in days",
+          "language": "csharp",
+          "options": [
+            "ชื่อสั้นเกินไปทำให้พิมพ์ยาก",
+            "ชื่อไม่สื่อความหมาย (Non-informative) ต้องเสียเวลาอ่านคอมเมนต์",
+            "ชื่อตัวแปรห้ามเป็นตัวอักษรเดียว",
+            "ชื่อตัวแปรซ้ำกับ Keyword ของภาษา"
+          ],
+          "answer": "ชื่อไม่สื่อความหมาย (Non-informative) ต้องเสียเวลาอ่านคอมเมนต์"
+        },
+        {
+          "question": "การใช้คำเติมท้าย (Suffix) ที่ไม่มีความหมายชัดเจน เช่น Info หรือ Data ถือเป็นสิ่งที่ไม่ควรทำเพราะเหตุใด?",
+          "code": "public class ProductInfo { ... }\npublic class ProductData { ... }",
+          "language": "csharp",
+          "options": [
+            "ทำให้ชื่อยาวเกินไป",
+            "เป็น Noise Word ที่ไม่ได้บอกความแตกต่างที่ชัดเจนระหว่างสองคลาสนี้",
+            "ทำให้ Compiler สับสน",
+            "ผิดหลัก Grammar ภาษาอังกฤษ"
+          ],
+          "answer": "เป็น Noise Word ที่ไม่ได้บอกความแตกต่างที่ชัดเจนระหว่างสองคลาสนี้"
+        },
+        {
+          "question": "การตั้งชื่อ Method ว่า 'getAccount' แต่ Return ค่าเป็น List<Account> ถือว่าผิดหลักการใด?",
+          "code": "public List<Account> getAccount() { ... }",
+          "language": "csharp",
+          "options": [
+            "ชื่อคลุมเครือ (Ambiguous) ควรใช้ชื่อพหูพจน์เช่น getAccounts",
+            "ชื่อยาวเกินไป",
+            "ควรใช้ชื่อว่า retrieveAccount",
+            "Method ต้องไม่ Return List"
+          ],
+          "answer": "ชื่อคลุมเครือ (Ambiguous) ควรใช้ชื่อพหูพจน์เช่น getAccounts"
+        },
+        {
+          "question": "การใช้ Flag Argument (เช่น boolean) ส่งเข้าไปใน Function เป็นสิ่งที่ไม่ควรทำเพราะเหตุใด?",
+          "code": "render(true); // true หมายความว่าไงนะ?",
+          "language": "csharp",
+          "options": [
+            "ทำให้ Function ทำงานช้าลง",
+            "แสดงว่า Function นั้นทำมากกว่า 1 อย่าง (ละเมิด SRP) และทำให้คนอ่านสับสน",
+            "Boolean กินพื้นที่หน่วยความจำเยอะ",
+            "ทำให้ Code ไม่สวย"
+          ],
+          "answer": "แสดงว่า Function นั้นทำมากกว่า 1 อย่าง (ละเมิด SRP) และทำให้คนอ่านสับสน"
+        },
+        {
+          "question": "Output Argument คืออะไร และทำไมควรหลีกเลี่ยง?",
+          "code": "public void appendFooter(StringBuffer report) {\n  // report ถูกแก้ไขภายในนี้\n}",
+          "language": "csharp",
+          "options": [
+            "Argument ที่ใช้รับค่า Input, ควรหลีกเลี่ยงเพราะทำให้ช้า",
+            "Argument ที่ถูกแก้ไขค่าภายใน Function เพื่อส่งผลลัพธ์กลับ, ควรหลีกเลี่ยงเพราะทำให้สับสน (Cognitive Break)",
+            "Argument ที่เป็นค่าคงที่, ควรหลีกเลี่ยงเพราะแก้ไขไม่ได้",
+            "Argument ที่เป็น Object, ควรหลีกเลี่ยงเพราะกิน Memory"
+          ],
+          "answer": "Argument ที่ถูกแก้ไขค่าภายใน Function เพื่อส่งผลลัพธ์กลับ, ควรหลีกเลี่ยงเพราะทำให้สับสน (Cognitive Break)"
+        },
+        {
+          "question": "หลักการ Command Query Separation (CQS) แนะนำว่าอย่างไร?",
+          "code": "// Violates CQS\nif (set('username', 'unclebob')) ...",
+          "language": "csharp",
+          "options": [
+            "Function ควรทำทั้งเปลี่ยนสถานะ (Command) และคืนค่า (Query) พร้อมกัน",
+            "Function ควรแยกกันชัดเจนระหว่างการกระทำ (Command) หรือการดึงข้อมูล (Query) อย่างใดอย่างหนึ่ง",
+            "Function ควรมีชื่อยาวๆ",
+            "Function ควรรรับ Argument ให้น้อยที่สุด"
+          ],
+          "answer": "Function ควรแยกกันชัดเจนระหว่างการกระทำ (Command) หรือการดึงข้อมูล (Query) อย่างใดอย่างหนึ่ง"
+        },
+        {
+          "question": "คอมเมนต์แบบใดที่ถือว่าเป็น 'Redundant Comment' (คอมเมนต์ฟุ่มเฟือย)?",
+          "code": "i++; // increment i",
+          "language": "csharp",
+          "options": [
+            "คอมเมนต์อธิบาย Algorithm ซับซ้อน",
+            "คอมเมนต์แจ้งเตือน Copyright",
+            "คอมเมนต์ที่อธิบายสิ่งที่ Code บอกชัดเจนอยู่แล้ว",
+            "คอมเมนต์ TODO"
+          ],
+          "answer": "คอมเมนต์ที่อธิบายสิ่งที่ Code บอกชัดเจนอยู่แล้ว"
+        },
+        {
+          "question": "เราควรจัดการกับ 'Commented-Out Code' (โค้ดที่ถูกคอมเมนต์ทิ้งไว้) อย่างไร?",
+          "code": "// int finalScore = score + bonus;\n// return finalScore;",
+          "language": "csharp",
+          "options": [
+            "เก็บไว้เผื่อได้ใช้ในอนาคต",
+            "ลบทิ้งทันที เพราะเรามี Version Control System (Git) ช่วยจำอยู่แล้ว",
+            "ย้ายไปไว้ไฟล์อื่น",
+            "เขียนคอมเมนต์กำกับว่าใครเป็นคนคอมเมนต์"
+          ],
+          "answer": "ลบทิ้งทันที เพราะเรามี Version Control System (Git) ช่วยจำอยู่แล้ว"
+        },
+        {
+          "question": "คอมเมนต์ประเภทใดที่ยอมรับได้และมีประโยชน์?",
+          "code": "// TODO: Refactor this method to reduce complexity",
+          "language": "csharp",
+          "options": [
+            "Journal Comments (บันทึกการแก้ไข)",
+            "TODO Comments (สิ่งที่ต้องทำในอนาคต)",
+            "Closing Brace Comments (บอกว่าวงเล็บปิดของอะไร)",
+            "Attribution Comments (บอกว่าใครเขียน)"
+          ],
+          "answer": "TODO Comments (สิ่งที่ต้องทำในอนาคต)"
+        },
+        {
+          "question": "กฎ 'Boy Scout Rule' ในบริบทของ Clean Code หมายถึงอะไร?",
+          "options": [
+            "ต้องเตรียมตัวให้พร้อมเสมอ",
+            "ให้ทิ้งโค้ดไว้ในสภาพที่ดีกว่าตอนที่คุณเจอเสมอ (Leave the code cleaner than you found it)",
+            "ต้องช่วยเหลือเพื่อนร่วมทีม",
+            "ต้องทำตามคำสั่งหัวหน้า"
+          ],
+          "answer": "ให้ทิ้งโค้ดไว้ในสภาพที่ดีกว่าตอนที่คุณเจอเสมอ (Leave the code cleaner than you found it)"
+        },
+        {
+          "question": "ข้อใดคือประโยชน์ของการทำ 'Pair Programming'?",
+          "options": [
+            "งานเสร็จเร็วขึ้น 2 เท่าเสมอ",
+            "ช่วยแชร์ความรู้ (Knowledge Sharing) และเป็นการ Review Code ไปในตัว",
+            "ประหยัดคอมพิวเตอร์",
+            "ไม่ต้องเขียน Test"
+          ],
+          "answer": "ช่วยแชร์ความรู้ (Knowledge Sharing) และเป็นการ Review Code ไปในตัว"
+        },
+        {
+          "question": "Technical Debt (หนี้ทางเทคนิค) เกิดจากอะไร?",
+          "options": [
+            "การยืมเงินมาซื้อ Server",
+            "การเลือกทางลัด (Shortcut) หรือเขียนโค้ดแย่ๆ เพื่อให้งานเสร็จเร็ว แต่ต้องจ่ายดอกเบี้ยเป็นการแก้ไขที่ยากขึ้นในอนาคต",
+            "การใช้ Open Source Software",
+            "การจ้าง Programmer ราคาแพง"
+          ],
+          "answer": "การเลือกทางลัด (Shortcut) หรือเขียนโค้ดแย่ๆ เพื่อให้งานเสร็จเร็ว แต่ต้องจ่ายดอกเบี้ยเป็นการแก้ไขที่ยากขึ้นในอนาคต"
+        },
+        {
+          "question": "Switch Statements มักจะละเมิดหลักการใดใน SOLID?",
+          "code": "switch (type) {\n  case COMMISSIONED:\n    return calculateCommissionedPay(employee);\n  case HOURLY:\n    return calculateHourlyPay(employee);\n  ...",
+          "language": "csharp",
+          "options": [
+            "SRP (Single Responsibility Principle)",
+            "OCP (Open Closed Principle) เพราะต้องแก้โค้ดเดิมเมื่อมี Type ใหม่",
+            "LSP (Liskov Substitution Principle)",
+            "ISP (Interface Segregation Principle)"
+          ],
+          "answer": "OCP (Open Closed Principle) เพราะต้องแก้โค้ดเดิมเมื่อมี Type ใหม่"
+        },
+        {
+          "question": "Feature Envy (ความอิจฉาฟีเจอร์) คือ Code Smell แบบใด?",
+          "options": [
+            "Method หนึ่งเรียกใช้ข้อมูลของ Object อื่นมากกว่าข้อมูลของตัวเอง",
+            "Class หนึ่งพยายามเลียนแบบอีก Class หนึ่ง",
+            "Programmer อิจฉาโค้ดของเพื่อน",
+            "การ Copy Code จาก StackOverflow"
+          ],
+          "answer": "Method หนึ่งเรียกใช้ข้อมูลของ Object อื่นมากกว่าข้อมูลของตัวเอง"
+        },
+        {
+          "question": "กฎ 3 ข้อของ TDD ข้อที่ 2 กล่าวว่าอย่างไร?",
+          "options": [
+            "เขียน Test ให้ผ่านทั้งหมด",
+            "ห้ามเขียน Unit Test มากเกินความจำเป็นจนกว่ามันจะพัง (Stop writing unit test when it fails)",
+            "เขียน Production Code ให้ผ่าน Test",
+            "Refactor ทันทีที่เขียนเสร็จ"
+          ],
+          "answer": "ห้ามเขียน Unit Test มากเกินความจำเป็นจนกว่ามันจะพัง (Stop writing unit test when it fails)"
         }
       ]
     },
@@ -1743,6 +1912,391 @@
             "Testing system"
           ],
           "answer": "การ merge code บ่อยครั้งและทดสอบอัตโนมัติ"
+        }
+      ]
+    },
+    {
+      "id": "code-smell",
+      "name": "Code Smells",
+      "description": "รู้จักและหลีกเลี่ยง \"กลิ่นเน่า\" ในโค้ด (Bad Code Smells)",
+      "icon": "🤢",
+      "color": "hsl(10, 80%, 50%)",
+      "questions": [
+        {
+          "question": "Code Smell: 'Rigidity' (ความดื้อ) หมายถึงอาการแบบใด?",
+          "options": [
+            "โค้ดที่แก้ไขยาก เพราะการแก้ 1 จุด กระทบส่วนอื่นเป็นลูกโซ่ (Cascade of changes)",
+            "โค้ดที่พังง่ายเมื่อมีการแก้ไข",
+            "โค้ดที่นำกลับมาใช้ใหม่ยาก",
+            "โค้ดที่อ่านไม่รู้เรื่อง"
+          ],
+          "answer": "โค้ดที่แก้ไขยาก เพราะการแก้ 1 จุด กระทบส่วนอื่นเป็นลูกโซ่ (Cascade of changes)"
+        },
+        {
+          "question": "Code Smell: 'Fragility' (ความเปราะบาง) หมายถึงอาการแบบใด?",
+          "options": [
+            "โค้ดที่แก้ไขยาก",
+            "โค้ดที่เมื่อแก้ไขจุดหนึ่ง กลับไปทำให้ส่วนที่ไม่เกี่ยวข้องกันพัง (Break in unrelated parts)",
+            "โค้ดที่ Compile ไม่ผ่าน",
+            "โค้ดที่ทำงานช้า"
+          ],
+          "answer": "โค้ดที่เมื่อแก้ไขจุดหนึ่ง กลับไปทำให้ส่วนที่ไม่เกี่ยวข้องกันพัง (Break in unrelated parts)"
+        },
+        {
+          "question": "Code Smell: 'Immobility' (ความย้ายยาก) เกิดจากสาเหตุใด?",
+          "options": [
+            "โค้ดผูกติดกับส่วนอื่นมากเกินไป (Coupling) จนแยกออกมาใช้ใหม่ (Reuse) ได้ยาก",
+            "ไฟล์มีขนาดใหญ่เกินไป",
+            "ไม่มี Unit Test",
+            "ใช้ภาษา Programming เก่า"
+          ],
+          "answer": "โค้ดผูกติดกับส่วนอื่นมากเกินไป (Coupling) จนแยกออกมาใช้ใหม่ (Reuse) ได้ยาก"
+        },
+        {
+          "question": "Code Smell: 'Viscosity' (ความหนืด) หมายถึงอะไร?",
+          "options": [
+            "ระบบทำงานช้า (Performance issue)",
+            "การทำสิ่งที่ถูกต้อง (Right thing) ทำได้ยากกว่าการทำสิ่งที่ผิด (Wrong thing/Hack)",
+            "การ Compile ใช้เวลานาน",
+            "การ Deploy ยุ่งยาก"
+          ],
+          "answer": "การทำสิ่งที่ถูกต้อง (Right thing) ทำได้ยากกว่าการทำสิ่งที่ผิด (Wrong thing/Hack)"
+        },
+        {
+          "question": "Code Smell: 'Opacity' (ความขุ่นมัว) หมายถึงอะไร?",
+          "options": [
+            "โค้ดที่อ่านแล้วเข้าใจยาก ไม่สื่อเจตนา (Hard to understand)",
+            "โค้ดที่ไม่มีคอมเมนต์เลย",
+            "โค้ดที่ซ่อน Logic ไว้ลึกเกินไป",
+            "โค้ดที่มี Bug เยอะ"
+          ],
+          "answer": "โค้ดที่อ่านแล้วเข้าใจยาก ไม่สื่อเจตนา (Hard to understand)"
+        },
+        {
+          "question": "Code Smell: 'Needless Complexity' (ซับซ้อนโดยไม่จำเป็น) มักเกิดจากอะไร?",
+          "code": "// ต้องการแค่แสดงทศนิยม 2 ตำแหน่ง\n// Bad: เขียนสูตรคำนวณเองยืดยาว\n// Good: Math.Round(value, 2)",
+          "language": "csharp",
+          "options": [
+            "การใช้ Library ภายนอกมากเกินไป",
+            "การออกแบบที่เผื่ออนาคตมากเกินไป (Over-engineering) หรือไม่ใช้ Built-in function ที่มีอยู่แล้ว",
+            "การเขียนโค้ดสั้นเกินไป",
+            "การใช้ Design Pattern ที่ถูกต้อง"
+          ],
+          "answer": "การออกแบบที่เผื่ออนาคตมากเกินไป (Over-engineering) หรือไม่ใช้ Built-in function ที่มีอยู่แล้ว"
+        },
+        {
+          "question": "Code Smell: 'Needless Repetition' (การทำซ้ำโดยไม่จำเป็น) ส่งผลเสียอย่างไร?",
+          "code": "// Copy-Paste Code\nvoid processA() { ... logic ... }\nvoid processB() { ... logic ... }",
+          "language": "csharp",
+          "options": [
+            "ทำให้ไฟล์มีขนาดใหญ่ขึ้นเล็กน้อย",
+            "เมื่อต้องแก้ไข Logic ต้องตามแก้ทุกจุดที่ Copy ไป (Shotgun Surgery) และเสี่ยงต่อการลืมแก้บางจุด",
+            "ทำให้โปรแกรมทำงานเร็วขึ้นเพราะไม่ต้องเรียก Function",
+            "ไม่มีผลเสียถ้าโค้ดทำงานถูกต้อง"
+          ],
+          "answer": "เมื่อต้องแก้ไข Logic ต้องตามแก้ทุกจุดที่ Copy ไป (Shotgun Surgery) และเสี่ยงต่อการลืมแก้บางจุด"
+        },
+        {
+          "question": "Code Smell: 'Long Method' (เมธอดที่ยาวเกินไป) ควรแก้ไขอย่างไร?",
+          "options": [
+            "เขียนคอมเมนต์อธิบายทุกบรรทัด",
+            "แบ่งเป็นเมธอดที่เล็กลง (Extract Method) และตั้งชื่อให้สื่อความหมาย",
+            "ยุบรวมบรรทัดให้สั้นลง",
+            "ย้ายไปไว้ใน Class อื่น"
+          ],
+          "answer": "แบ่งเป็นเมธอดที่เล็กลง (Extract Method) และตั้งชื่อให้สื่อความหมาย"
+        },
+        {
+          "question": "Code Smell: 'Large Class' (God Class) คืออะไร?",
+          "options": [
+            "Class ที่มีชื่อยาวมาก",
+            "Class ที่ทำหน้าที่หลายอย่างเกินไป (Violates SRP) และมีตัวแปร/เมธอดจำนวนมาก",
+            "Class ที่สืบทอดมาจากหลาย Class",
+            "Class ที่ใช้ Memory เยอะ"
+          ],
+          "answer": "Class ที่ทำหน้าที่หลายอย่างเกินไป (Violates SRP) และมีตัวแปร/เมธอดจำนวนมาก"
+        },
+        {
+          "question": "Code Smell: 'Primitive Obsession' คือการใช้อะไรผิดวิธี?",
+          "code": "// Bad\nvoid saveUser(string name, string phone, string email, string address, string zip);",
+          "language": "csharp",
+          "options": [
+            "ใช้ตัวแปร Global มากเกินไป",
+            "ใช้ Primitive Type (int, string, etc.) แทนที่จะสร้าง Class/Object เล็กๆ เพื่อห่อหุ้มข้อมูลและ Logic (เช่น PhoneNumber class)",
+            "ใช้ Object มากเกินไป",
+            "ใช้ Loop แทน Recursion"
+          ],
+          "answer": "ใช้ Primitive Type (int, string, etc.) แทนที่จะสร้าง Class/Object เล็กๆ เพื่อห่อหุ้มข้อมูลและ Logic (เช่น PhoneNumber class)"
+        },
+        {
+          "question": "Code Smell: 'Data Clumps' (กลุ่มข้อมูลที่เกาะติดกัน) ควรแก้ไขอย่างไร?",
+          "code": "// Bad: parameters always go together\nvoid draw(int x, int y, int z);\nvoid move(int x, int y, int z);",
+          "language": "csharp",
+          "options": [
+            "ลบ Parameter บางตัวออก",
+            "รวมกลุ่มข้อมูลเหล่านั้นเป็น Class ใหม่ (Extract Class) เช่น Point3D",
+            "เปลี่ยนชื่อ Parameter ให้เหมือนกัน",
+            "ใช้ Global Variable แทน"
+          ],
+          "answer": "รวมกลุ่มข้อมูลเหล่านั้นเป็น Class ใหม่ (Extract Class) เช่น Point3D"
+        },
+        {
+          "question": "Code Smell: 'Feature Envy' (ความอิจฉาฟีเจอร์) เกิดขึ้นเมื่อใด?",
+          "code": "class Order {\n  void calculateTotal(Customer customer) {\n    // เรียกใช้แต่ method ของ customer\n    customer.getDiscount();\n    customer.getBonus();\n    customer.getHistory();\n  }\n}",
+          "language": "csharp",
+          "options": [
+            "Method หนึ่งเรียกใช้ข้อมูลของ Object อื่นมากกว่าข้อมูลของตัวเอง",
+            "Class หนึ่งพยายามเลียนแบบอีก Class หนึ่ง",
+            "Programmer อิจฉาโค้ดของเพื่อน",
+            "การ Copy Code จาก StackOverflow"
+          ],
+          "answer": "Method หนึ่งเรียกใช้ข้อมูลของ Object อื่นมากกว่าข้อมูลของตัวเอง"
+        },
+        {
+          "question": "Code Smell: 'Switch Statements' (ที่ซับซ้อน) มักจะละเมิดหลักการใด?",
+          "code": "switch (type) {\n  case A: ...\n  case B: ...\n  case C: ...\n}",
+          "language": "csharp",
+          "options": [
+            "SRP (Single Responsibility Principle)",
+            "OCP (Open Closed Principle) เพราะต้องแก้โค้ดเดิมเมื่อมี Type ใหม่",
+            "LSP (Liskov Substitution Principle)",
+            "ISP (Interface Segregation Principle)"
+          ],
+          "answer": "OCP (Open Closed Principle) เพราะต้องแก้โค้ดเดิมเมื่อมี Type ใหม่"
+        },
+        {
+          "question": "Code Smell: 'Dead Code' หมายถึงอะไร?",
+          "options": [
+            "โค้ดที่ทำงานผิดพลาด",
+            "โค้ดที่ไม่มีวันถูกเรียกใช้งาน (Unreachable code) หรือตัวแปรที่ไม่ได้ใช้",
+            "โค้ดที่ไม่มีคอมเมนต์",
+            "โค้ดที่เขียนโดยคนที่ลาออกไปแล้ว"
+          ],
+          "answer": "โค้ดที่ไม่มีวันถูกเรียกใช้งาน (Unreachable code) หรือตัวแปรที่ไม่ได้ใช้"
+        },
+        {
+          "question": "การใช้ 'Comments' เพื่ออธิบายโค้ดที่ซับซ้อนและเข้าใจยาก ถือเป็น Code Smell หรือไม่?",
+          "options": [
+            "ไม่เป็น เพราะคอมเมนต์ช่วยให้อ่านง่าย",
+            "เป็น เพราะคอมเมนต์ทำหน้าที่เป็น 'Deodorant' (น้ำหอมดับกลิ่น) เพื่อกลบเกลื่อนโค้ดที่เขียนไม่ดี (ควร Refactor โค้ดให้อ่านง่ายแทน)",
+            "เป็นเฉพาะเมื่อคอมเมนต์เป็นภาษาไทย",
+            "ไม่เป็น ถ้าคอมเมนต์สั้นๆ"
+          ],
+          "answer": "เป็น เพราะคอมเมนต์ทำหน้าที่เป็น 'Deodorant' (น้ำหอมดับกลิ่น) เพื่อกลบเกลื่อนโค้ดที่เขียนไม่ดี (ควร Refactor โค้ดให้อ่านง่ายแทน)"
+        }
+      ]
+    },
+    {
+      "id": "uml",
+      "name": "UML Diagrams",
+      "description": "Class, Activity, Sequence และ Use Case Diagram",
+      "icon": "📊",
+      "color": "hsl(280, 85%, 65%)",
+      "questions": [
+        {
+          "question": "Class Diagram ใช้สำหรับอะไร?",
+          "options": [
+            "แสดงโครงสร้างของคลาสและความสัมพันธ์ระหว่างคลาส",
+            "แสดงลำดับการทำงานของระบบ",
+            "แสดง Use Case ต่างๆของระบบ",
+            "แสดงกระบวนการทำงานแบบ Step by Step"
+          ],
+          "answer": "แสดงโครงสร้างของคลาสและความสัมพันธ์ระหว่างคลาส"
+        },
+        {
+          "question": "จากรูป Class Diagram นี้ LoginRequest มี Field อะไรบ้าง?",
+          "image": "https://www.saladpuk.com/~gitbook/image?url=https%3A%2F%2F479516123-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-Lm0_idNbY6k1lwp6hm4%252F-M1lfqlFTvI3gmheTI_q%252F-M-iCsE9ut9N8gP2Kaf2%252Fimage.png%3Fgeneration%3D1583529127275217%26alt%3Dmedia&width=768&dpr=4&quality=100&sign=200b1ed6&sv=2",
+          "options": [
+            "Username และ Password",
+            "Email และ Password",
+            "Username เท่านั้น",
+            "Id และ Token"
+          ],
+          "answer": "Username และ Password"
+        },
+        {
+          "question": "สัญลักษณ์ + ใน Class Diagram หมายถึง Visibility แบบใด?",
+          "options": [
+            "public",
+            "private",
+            "protected",
+            "package"
+          ],
+          "answer": "public"
+        },
+        {
+          "question": "สัญลักษณ์ - ใน Class Diagram หมายถึง Visibility แบบใด?",
+          "options": [
+            "public",
+            "private",
+            "protected",
+            "package"
+          ],
+          "answer": "private"
+        },
+        {
+          "question": "Composition (ความสัมพันธ์แบบ Solid Diamond) มีลักษณะอย่างไร?",
+          "image": "https://www.saladpuk.com/~gitbook/image?url=https%3A%2F%2F479516123-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-Lm0_idNbY6k1lwp6hm4%252F-M1lfqlFTvI3gmheTI_q%252F-Lntpj_Qt9oKL_IElbbs%252Fimage.png%3Fgeneration%3D1583529137750505%26alt%3Dmedia&width=768&dpr=4&quality=100&sign=88175cf8&sv=2",
+          "options": [
+            "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบก็จะถูกทำลายตามไปด้วย",
+            "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบยังคงอยู่ต่อ",
+            "เป็นการสืบทอดคลาส",
+            "เป็นการ implement interface"
+          ],
+          "answer": "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบก็จะถูกทำลายตามไปด้วย"
+        },
+        {
+          "question": "Aggregation (ความสัมพันธ์แบบ Hollow Diamond) มีลักษณะอย่างไร?",
+          "image": "https://www.saladpuk.com/~gitbook/image?url=https%3A%2F%2F479516123-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-Lm0_idNbY6k1lwp6hm4%252F-M1lfqlFTvI3gmheTI_q%252F-LvkERPHtdNrCEKIzocg%252Fimage.png%3Fgeneration%3D1583529121878892%26alt%3Dmedia&width=768&dpr=4&quality=100&sign=39a3a7fb&sv=2",
+          "options": [
+            "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบก็จะถูกทำลายตามไปด้วย",
+            "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบยังคงอยู่ต่อ",
+            "เป็นการสืบทอดคลาส",
+            "เป็นการ implement interface"
+          ],
+          "answer": "ถ้า object เจ้าของถูกทำลาย ส่วนประกอบยังคงอยู่ต่อ"
+        },
+        {
+          "question": "Generalization (Inheritance) ใน Class Diagram ใช้ลูกศรแบบไหน?",
+          "image": "https://www.saladpuk.com/~gitbook/image?url=https%3A%2F%2F479516123-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-Lm0_idNbY6k1lwp6hm4%252F-M1lfqlFTvI3gmheTI_q%252F-LnNFbxowQYg7-CUZDd1%252Fimage.png%3Fgeneration%3D1583529171967495%26alt%3Dmedia&width=768&dpr=4&quality=100&sign=f7062c4b&sv=2",
+          "options": [
+            "ลูกศรหัวสามเหลี่ยมเส้นทึบ ชี้ไปที่ Base Class",
+            "ลูกศรหัวสามเหลี่ยมเส้นประ ชี้ไปที่ Interface",
+            "เส้นตรงธรรมดา",
+            "เส้นประพร้อมลูกศร"
+          ],
+          "answer": "ลูกศรหัวสามเหลี่ยมเส้นทึบ ชี้ไปที่ Base Class"
+        },
+        {
+          "question": "Realization (การ Implement Interface) ใช้ลูกศรแบบไหน?",
+          "image": "https://www.saladpuk.com/~gitbook/image?url=https%3A%2F%2F479516123-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-Lm0_idNbY6k1lwp6hm4%252F-M1lfqlFTvI3gmheTI_q%252F-LoQIOWVAsyS_I9fivob%252Fimage.png%3Fgeneration%3D1583529133258008%26alt%3Dmedia&width=768&dpr=4&quality=100&sign=2a62c7ba&sv=2",
+          "options": [
+            "ลูกศรหัวสามเหลี่ยมเส้นทึบ",
+            "ลูกศรหัวสามเหลี่ยมเส้นประ ชี้ไปที่ Interface",
+            "เส้นตรงธรรมดา",
+            "Diamond ทึบ"
+          ],
+          "answer": "ลูกศรหัวสามเหลี่ยมเส้นประ ชี้ไปที่ Interface"
+        },
+        {
+          "question": "Abstract Class และ Method ใน UML จะแสดงอย่างไร?",
+          "options": [
+            "ใช้ตัวหนา (Bold)",
+            "ใช้ตัวเอียง (Italic)",
+            "ขีดเส้นใต้",
+            "ใส่วงเล็บปีกกา {}"
+          ],
+          "answer": "ใช้ตัวเอียง (Italic)"
+        },
+        {
+          "question": "Static Member ใน Class Diagram จะแสดงอย่างไร?",
+          "options": [
+            "ใช้ตัวหนา (Bold)",
+            "ใช้ตัวเอียง (Italic)",
+            "ขีดเส้นใต้",
+            "ใส่เครื่องหมาย + ข้างหน้า"
+          ],
+          "answer": "ขีดเส้นใต้"
+        },
+        {
+          "question": "Activity Diagram ใช้สำหรับอะไร?",
+          "options": [
+            "แสดงโครงสร้างของคลาส",
+            "แสดงขั้นตอนการทำงานหรือกระบวนการต่างๆ",
+            "แสดงการสื่อสารระหว่าง Object",
+            "แสดงความสัมพันธ์ระหว่าง Actor กับ Use Case"
+          ],
+          "answer": "แสดงขั้นตอนการทำงานหรือกระบวนการต่างๆ"
+        },
+        {
+          "question": "Initial Node ใน Activity Diagram แสดงด้วยสัญลักษณ์ใด?",
+          "options": [
+            "วงกลมทึบ",
+            "วงกลมกลวง",
+            "สี่เหลี่ยม",
+            "รูปดาว"
+          ],
+          "answer": "วงกลมทึบ"
+        },
+        {
+          "question": "Decision Node ใน Activity Diagram แสดงด้วยรูปอะไร?",
+          "options": [
+            "วงกลม",
+            "สี่เหลี่ยม",
+            "รูปข้าวหลามตัด (Diamond)",
+            "วงรี"
+          ],
+          "answer": "รูปข้าวหลามตัด (Diamond)"
+        },
+        {
+          "question": "Final Node ใน Activity Diagram มีลักษณะอย่างไร?",
+          "options": [
+            "วงกลมทึบ",
+            "วงกลมกลวงมีวงกลมทึบอยู่ข้างใน",
+            "สี่เหลี่ยม",
+            "รูป X"
+          ],
+          "answer": "วงกลมกลวงมีวงกลมทึบอยู่ข้างใน"
+        },
+        {
+          "question": "Sequence Diagram ใช้สำหรับอะไร?",
+          "options": [
+            "แสดงโครงสร้างของคลาส",
+            "แสดงลำดับการสื่อสารระหว่าง Object ตามเวลา",
+            "แสดงขั้นตอนการทำงาน",
+            "แสดง Use Case ของระบบ"
+          ],
+          "answer": "แสดงลำดับการสื่อสารระหว่าง Object ตามเวลา"
+        },
+        {
+          "question": "Lifeline ใน Sequence Diagram คืออะไร?",
+          "options": [
+            "เส้นแนวนอนแสดงเวลา",
+            "เส้นประแนวตั้งแสดงช่วงชีวิตของ Object",
+            "ลูกศรแสดงการส่ง Message",
+            "กล่องแสดง Object"
+          ],
+          "answer": "เส้นประแนวตั้งแสดงช่วงชีวิตของ Object"
+        },
+        {
+          "question": "Activation ใน Sequence Diagram คืออะไร?",
+          "options": [
+            "การสร้าง Object ใหม่",
+            "กล่องบนเส้น Lifeline แสดงว่า Object กำลังทำงาน",
+            "การทำลาย Object",
+            "การส่ง Message กลับ"
+          ],
+          "answer": "กล่องบนเส้น Lifeline แสดงว่า Object กำลังทำงาน"
+        },
+        {
+          "question": "Use Case Diagram ใช้สำหรับอะไร?",
+          "options": [
+            "แสดงโครงสร้างของคลาส",
+            "แสดงความสัมพันธ์ระหว่าง Actor และ Use Case ของระบบ",
+            "แสดงลำดับการทำงาน",
+            "แสดงกระบวนการทำงาน"
+          ],
+          "answer": "แสดงความสัมพันธ์ระหว่าง Actor และ Use Case ของระบบ"
+        },
+        {
+          "question": "Extend ใน Use Case Diagram หมายถึงอะไร?",
+          "options": [
+            "Use Case หนึ่งต้องใช้ Use Case อื่นเสมอ",
+            "Use Case หนึ่งขยายความสามารถของ Use Case อื่นในบางกรณี",
+            "Actor สืบทอดจาก Actor อื่น",
+            "Use Case สืบทอดจาก Use Case อื่น"
+          ],
+          "answer": "Use Case หนึ่งขยายความสามารถของ Use Case อื่นในบางกรณี"
+        },
+        {
+          "question": "Include ใน Use Case Diagram หมายถึงอะไร?",
+          "options": [
+            "Use Case หนึ่งต้องใช้ Use Case อื่นเพื่อให้ทำงานสำเร็จ",
+            "Use Case หนึ่งขยายความสามารถของ Use Case อื่น",
+            "Actor สืบทอดจาก Actor อื่น",
+            "Use Case ไม่เกี่ยวข้องกัน"
+          ],
+          "answer": "Use Case หนึ่งต้องใช้ Use Case อื่นเพื่อให้ทำงานสำเร็จ"
         }
       ]
     },

@@ -21,6 +21,7 @@ const submitBtn = document.getElementById("submit-btn");
 const retryBtn = document.getElementById("retry-btn");
 const reviewBtn = document.getElementById("review-btn");
 const backToResultBtn = document.getElementById("back-to-result-btn");
+const backToMenuBtn = document.getElementById("back-to-menu-btn");
 
 const categoriesGrid = document.getElementById("categories-grid");
 
@@ -421,6 +422,7 @@ submitBtn.addEventListener("click", submitQuiz);
 retryBtn.addEventListener("click", retryQuiz);
 reviewBtn.addEventListener("click", showReview);
 backToResultBtn.addEventListener("click", backToResult);
+backToMenuBtn.addEventListener("click", showCategoryScreen);
 
 // ===== Initialize App =====
 init();

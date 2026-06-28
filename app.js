@@ -77,6 +77,7 @@ async function init() {
   }
 }
 
+
 function populateTopicTags() {
   const topicsPreview = document.querySelector(".topics-preview");
   if (!topicsPreview) return;
